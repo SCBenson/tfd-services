@@ -1,3 +1,4 @@
 <template></template>
-<script>
+<script setup>
+import {data} from "@/assets/scripts/navDrawer.js";
 </script>
