@@ -16,7 +16,7 @@ app.use(express.json());
 // Contact form endpoint
 app.post("/api/contact", async (req, res) => {
   try {
-    const { name, email, phone, subject, message } = req.body;
+    const { firstName, email, phone, subject, message } = req.body;
 
     // Create email content with form data
     const msg = {
@@ -26,7 +26,7 @@ app.post("/api/contact", async (req, res) => {
       text: `
         New contact form submission:
         
-        Name: ${name}
+        Name: ${firstName}
         Email: ${email}
         Phone: ${phone}
         Subject: ${subject}
@@ -34,7 +34,7 @@ app.post("/api/contact", async (req, res) => {
       `,
       html: `
         <h3>New Contact Form Submission</h3>
-        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Name:</strong> ${firstName}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Subject:</strong> ${subject}</p>

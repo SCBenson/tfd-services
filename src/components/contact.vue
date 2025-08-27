@@ -168,7 +168,7 @@ const submitForm = async () => {
         message: form.value.message
       })
       if (response.data.success) {
-        successMessage.vale = "Thank you for your message! We will get back to you soon."
+        successMessage.value = "Thank you for your message! We will get back to you soon."
 
         contactForm.value.reset()
         Object.keys(form.value).forEach(key => form.value[key] = '')
