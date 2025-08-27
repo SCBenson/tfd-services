@@ -160,7 +160,7 @@ const submitForm = async () => {
     successMessage.value = ''
     errorMessage.value = ''
     try {
-      const response = await axios.post('http://localhost:5173/api/contact', {
+      const response = await axios.post('http://localhost:3000/api/contact', {
         firstName: form.value.firstName,
         phone: form.value.phone,
         email: form.value.email,
