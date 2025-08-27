@@ -79,7 +79,8 @@
                     color="primary"
                     size="large"
                     variant="elevated"
-                    :disabled="!formValid"
+                    :disabled="!formValid || loading"
+                    :loading="loading"
                     @click="submitForm"
                     class="px-8"
                   >
@@ -87,6 +88,16 @@
                     Submit Message
                   </v-btn>
                 </div>
+                <div class="text-center mt-4" v-if="loading">
+                  <v-progress-circular indeterminate color="primary"></v-progress-circular>
+                  <p class="mt-2">Sending message...</p>
+                </div>
+                <v-alert v-if="successMessage" type="success" class="mt-4">
+                  {{ successMessage }}
+                </v-alert>
+                <v-alert v-if="errorMessage" type="error" class="mt-4">
+                  {{ errorMessage }}
+                </v-alert>
               </v-form>
             </v-card-text>
           </v-card>
@@ -101,6 +112,10 @@ import { ref } from 'vue'
 
 const formValid = ref(false)
 const contactForm = ref(null)
+
+const loading = ref(false)
+const successMessage = ref('')
+const errorMessage = ref('')
 
 const form = ref({
   firstName: '',
@@ -140,17 +155,29 @@ const submitForm = async () => {
   const { valid } = await contactForm.value.validate()
   
   if (valid) {
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', form.value)
-    
-    // For now, just show a success message
-    alert('Thank you for your message! We will get back to you soon.')
-    
-    // Reset the form
-    contactForm.value.reset()
-    Object.keys(form.value).forEach(key => {
-      form.value[key] = ''
-    })
+    loading.value = true
+    successMessage.value = ''
+    errorMessage.value = ''
+    try {
+      const response = await axios.post('http://localhost:5173/api/contact', {
+        firstName: form.value.firstName,
+        phone: form.value.phone,
+        email: form.value.email,
+        subject: form.value.subject,
+        message: form.value.message
+      })
+      if (response.data.success) {
+        successMessage.vale = "Thank you for your message! We will get back to you soon."
+
+        contactForm.value.reset()
+        Object.keys(form.value).forEach(key => form.value[key] = '')
+      }
+    } catch (error) {
+      console.error('Error sending message:', error)
+      errorMessage.value = "An error occurred while sending your message. Please try again later."
+    } finally {
+      loading.value = false
+    }
   }
 }
 </script>
