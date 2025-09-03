@@ -6,7 +6,7 @@
           <v-card class="contact-form-card" elevation="8">
             <v-card-title class="text-center pa-6">
               <h1 class="text-h4 font-weight-bold">Contact Us</h1>
-              <p class="text-subtitle-1 mt-2 text-grey-darken-1">
+              <p class="text-subtitle-1 mt-2 text-grey-darken-1 text-wrap">
                 Get in touch with our winter maintenance experts
               </p>
             </v-card-title>
