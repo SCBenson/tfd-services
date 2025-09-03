@@ -6,6 +6,29 @@
       <div class="initial-snow">
         <div class="snow">&#10052;</div>
         <div class="snow">&#10052;</div>
+        <div class="snow">&#10052; <div class="speech-bubble message-3-bubble">
+            Snow Clearance & Ploughing
+            <div class="speech-bubble-tail"></div>
+          </div></div>
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+        <div class="snow talking-snow message-1-snow">
+          &#10052;
+          <div class="speech-bubble message-1-bubble">
+            24-Hour Response
+            <div class="speech-bubble-tail"></div>
+          </div>
+        </div>
+        <div class="snow">&#10052; </div>
+        <div class="snow">&#10052;<div class="speech-bubble message-2-bubble">
+            Gritting & Salt Spreading
+            <div class="speech-bubble-tail"></div>
+          </div></div>
         <div class="snow">&#10052;</div>
         <div class="snow">&#10052;</div>
         <div class="snow">&#10052;</div>
@@ -18,6 +41,9 @@
         <div class="snow">&#10052;</div>
         <div class="snow">&#10052;</div>
         <div class="snow">&#10052;</div>
+        <div class="snow talking-snow message-2-snow">
+          &#10052;
+        </div>
         <div class="snow">&#10052;</div>
         <div class="snow">&#10052;</div>
         <div class="snow">&#10052;</div>
@@ -25,22 +51,10 @@
         <div class="snow">&#10052;</div>
         <div class="snow">&#10052;</div>
         <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
+        <div class="snow talking-snow message-3-snow">
+          &#10052;
+          
+        </div>
         <div class="snow">&#10052;</div>
         <div class="snow">&#10052;</div>
         <div class="snow">&#10052;</div>
@@ -238,6 +252,102 @@
   color: white;
   position: absolute;
   top: -5vh;
+}
+
+/* Speech Bubble Styles */
+.talking-snow {
+  position: relative;
+}
+
+.speech-bubble {
+  position: absolute;
+  background: white;
+  color: #1976d2;
+  padding: 10px 16px;
+  border-radius: 16px;
+  font-size: 13px !important;
+  font-weight: bold;
+  white-space: nowrap;
+  top: -15px;
+  left: 65px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 10;
+  text-align: center;
+  border: 2px solid #1976d2;
+}
+
+.speech-bubble-tail {
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #1976d2;
+}
+
+.speech-bubble-tail::after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid white;
+}
+
+/* Individual bubble styling */
+.message-1-bubble {
+  min-width: 140px;
+}
+
+.message-2-bubble {
+  min-width: 180px;
+}
+
+.message-3-bubble {
+  min-width: 190px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .speech-bubble {
+    font-size: 11px !important;
+    padding: 8px 12px;
+    left: 55px;
+    top: -12px;
+  }
+  
+  .message-1-bubble {
+    min-width: 120px;
+  }
+
+  .message-2-bubble {
+    min-width: 150px;
+  }
+
+  .message-3-bubble {
+    min-width: 160px;
+  }
+  
+  .speech-bubble-tail {
+    left: -8px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    border-right-width: 8px;
+  }
+  
+  .speech-bubble-tail::after {
+    left: 2px;
+    top: -6px;
+    border-top-width: 6px;
+    border-bottom-width: 6px;
+    border-right-width: 6px;
+  }
 }
 
 @keyframes snowfall {
