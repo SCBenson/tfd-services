@@ -3,8 +3,8 @@
         <h1>About Us</h1>
         
         <!-- Machinery Carousel -->
-        <v-row class="mt-2 mb-4">
-            <v-col cols="12">
+        <v-row class="mt-2 mb-4 justify-center">
+            <v-col cols="12" sm="10" md="8" lg="6" xl="5">
                 <v-card class="machinery-carousel-card" elevation="4">
                     <v-card-title class="pb-4">
                         <h2 class="text-h5 text-wrap">Our Winter Maintenance Equipment</h2>
@@ -21,11 +21,15 @@
                         <v-carousel-item
                             v-for="(image, index) in machineryImages"
                             :key="index"
-                            :src="image.src"
-                            :alt="image.alt"
-                            cover
                             class="carousel-item"
                         >
+                            <v-img
+                                :src="image.src"
+                                :alt="image.alt"
+                                contain
+                                class="carousel-image"
+                                height="100%"
+                            ></v-img>
                         </v-carousel-item>
                     </v-carousel>
                 </v-card>
@@ -134,6 +138,14 @@ const machineryImages = ref([
 
 .carousel-item {
     border-radius: 8px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-image {
+    object-fit: contain !important;
 }
 
 /* Mobile responsiveness */
@@ -146,21 +158,21 @@ const machineryImages = ref([
 /* Tablet responsiveness */
 @media (min-width: 601px) and (max-width: 960px) {
     .machinery-carousel {
-        height: 300px !important;
+        height: 350px !important;
     }
 }
 
 /* Desktop and larger */
 @media (min-width: 961px) {
     .machinery-carousel {
-        height: 400px !important;
+        height: 450px !important;
     }
 }
 
 /* Large screens */
 @media (min-width: 1440px) {
     .machinery-carousel {
-        height: 500px !important;
+        height: 550px !important;
     }
 }
 </style>
