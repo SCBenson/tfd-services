@@ -1,13 +1,13 @@
 <template>
-    <v-container class="text-center px-8">
-        <h1>About Us</h1>
+    <v-container class="text-center px-8" style="max-width: 1200px;">
+        <h1 class="text-h3 mb-6">About Us</h1>
         
         <!-- Machinery Carousel -->
         <v-row class="mt-2 mb-4 justify-center">
             <v-col cols="12" sm="10" md="8" lg="6" xl="5">
                 <v-card class="machinery-carousel-card" elevation="4">
                     <v-card-title class="pb-4">
-                        <h2 class="text-h5 text-wrap">Our Winter Maintenance Equipment</h2>
+                        <h2 class="text-h4 font-weight-bold text-wrap">Our Winter Maintenance Equipment</h2>
                     </v-card-title>
                     <v-carousel
                         v-model="currentSlide"
@@ -36,65 +36,113 @@
             </v-col>
         </v-row>
         
-        <v-row>
-            <v-col>
-                <v-card>
-                    <v-card-title>Our Expertise</v-card-title>
-                    <v-card-text>With hundreds of accredited winter maintenance 
-                        professionals on standby, we deliver both proactive and 
-                        reactive services tailored to your specific needs. 
-                        Our experienced teams utilise cutting-edge weather 
-                        forecasting technology and modern equipment to ensure 
-                        optimal timing and effectiveness of our interventions.
+        <!-- Company Overview -->
+        <v-row class="mb-6">
+            <v-col cols="12">
+                <v-card class="pa-6" elevation="2">
+                    <v-card-text class="text-center">
+                        <h2 class="text-h4 mb-4 font-weight-bold">Professional Winter Maintenance Services</h2>
+                        <p class="text-body-1 text-grey-darken-1 mb-0">
+                            Our winter services help clients deal with adverse weather conditions by maintaining access to their property, 
+                            keeping staff and visitors safe and ensuring business continuity throughout the winter months.
+                        </p>
+                    </v-card-text>
+                </v-card>
+            </v-col>
+        </v-row>
+
+        <!-- Services Grid -->
+        <v-row class="mb-6">
+            <v-col cols="12" md="6" lg="4">
+                <v-card class="h-100" elevation="3">
+                    <v-card-title class="bg-primary text-white text-h6">
+                        <v-icon class="mr-2">mdi-truck</v-icon>
+                        Gritting & Salt Spreading
+                    </v-card-title>
+                    <v-card-text class="pa-4">
+                        <p class="text-body-1">Professional proactive and reactive gritting services for car parks, roads, and pathways. 
+                        We apply salt before frost, ice, or snowfall forms using predictive weather forecasting to 
+                        prevent bonding with road surfaces.</p>
                     </v-card-text>
                 </v-card>
             </v-col>
             
-            <v-col>
-                <v-card>
-                    <v-card-title>Winter Maintenance Planning</v-card-title>
-                    <v-card-text>Comprehensive site assessments and customised 
-                        maintenance strategies to keep your business running 
-                        smoothly throughout winter.
+            <v-col cols="12" md="6" lg="4">
+                <v-card class="h-100" elevation="3">
+                    <v-card-title class="bg-primary text-white text-h6">
+                        <v-icon class="mr-2">mdi-snowflake</v-icon>
+                        Snow Clearance & Ploughing
+                    </v-card-title>
+                    <v-card-text class="pa-4">
+                        <p class="text-body-1">Rapid deployment of snow removal teams with dedicated ploughing equipment for everything from 
+                        large retail complexes to pedestrian walkways. Our teams coordinate on-site attendance, 
+                        often working overnight when snowfall reaches 5cm depth.</p>
                     </v-card-text>
                 </v-card>
             </v-col>
-            <v-col>
-                <v-card>
-                    <v-card-title>Gritting & Salt Spreading</v-card-title>
-                    <v-card-text>Professional application of de-icing materials 
-                        using specialised machinery for roads, car parks, and 
-                        pedestrian areas.
+            
+            <v-col cols="12" md="6" lg="4">
+                <v-card class="h-100" elevation="3">
+                    <v-card-title class="bg-primary text-white text-h6">
+                        <v-icon class="mr-2">mdi-clock-outline</v-icon>
+                        24-Hour Response
+                    </v-card-title>
+                    <v-card-text class="pa-4">
+                        <p class="text-body-1">Round-the-clock monitoring and deployment across Galway city and county. 
+                        We use the most up-to-date weather reporting to monitor conditions and deploy 
+                        our teams to provide safe access for staff, visitors, and customers.</p>
                     </v-card-text>
                 </v-card>
             </v-col>
-                        <v-col>
-                <v-card>
-                    <v-card-title>Snow Clearance & Ploughing</v-card-title>
-                    <v-card-text>Rapid deployment of snow removal teams with 
-                        dedicated ploughing equipment for everything from large 
-                        retail complexes to pedestrian walkways.
+        </v-row>
+
+        <!-- Key Features -->
+        <v-row class="mb-6">
+            <v-col cols="12" md="6">
+                <v-card class="h-100" elevation="2">
+                    <v-card-title class="text-h6">
+                        <v-icon class="mr-2 text-orange">mdi-shield-check</v-icon>
+                        Our Expertise
+                    </v-card-title>
+                    <v-card-text class="pa-4">
+                        <p class="text-body-1">With hundreds of accredited winter maintenance professionals on standby, we deliver both 
+                        proactive and reactive services tailored to your specific needs. Our experienced teams utilise 
+                        cutting-edge weather forecasting technology and modern equipment to ensure optimal timing and 
+                        effectiveness of our interventions.</p>
                     </v-card-text>
                 </v-card>
             </v-col>
-                        <v-col>
-                <v-card>
-                    <v-card-title>24-Hour Response</v-card-title>
-                    <v-card-text>Round-the-clock monitoring and deployment 
-                        ensuring immediate response when weather conditions 
-                        demand action.
+            
+            <v-col cols="12" md="6">
+                <v-card class="h-100" elevation="2">
+                    <v-card-title class="text-h6">
+                        <v-icon class="mr-2 text-orange">mdi-safety-goggles</v-icon>
+                        Safety First
+                    </v-card-title>
+                    <v-card-text class="pa-4">
+                        <p class="text-body-1">Health and safety is our priority. Our fully trained professionals use appropriate thermal 
+                        high-visibility workwear and operate modern, well-maintained equipment. We understand that 
+                        winter weather doesn't follow business hours, which is why our teams are ready to deploy at 
+                        any time to maintain safe access.</p>
                     </v-card-text>
                 </v-card>
             </v-col>
-                        <v-col>
-                <v-card>
-                    <v-card-title>Our Commitment</v-card-title>
-                    <v-card-text>Safety drives everything we do. Our fully trained 
-                        professionals use appropriate thermal high-visibility workwear 
-                        and operate modern, well-maintained equipment. We understand 
-                        that winter weather doesn't follow business hours, which is 
-                        why our teams are ready to deploy at any time to maintain safe 
-                        access for your staff, visitors, and customers.
+        </v-row>
+
+        <!-- Coverage Area -->
+        <v-row class="mb-6">
+            <v-col cols="12">
+                <v-card class="text-center pa-6" elevation="2">
+                    <v-card-title class="text-h6 mb-4">
+                        <v-icon class="mr-2 text-primary">mdi-map-marker-radius</v-icon>
+                        Service Coverage
+                    </v-card-title>
+                    <v-card-text>
+                        <p class="text-body-1 mb-0">
+                            Local teams operate across <strong>Galway city and county</strong> with the capability to deploy 
+                            anywhere across the country. From large retail car parks to pedestrian footpaths and walkways, 
+                            we provide comprehensive winter maintenance solutions for all facility types.
+                        </p>
                     </v-card-text>
                 </v-card>
             </v-col>
