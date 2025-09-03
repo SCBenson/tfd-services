@@ -1,6 +1,37 @@
 <template>
     <v-container class="text-center px-8">
         <h1>About Us</h1>
+        
+        <!-- Machinery Carousel -->
+        <v-row class="mt-2 mb-4">
+            <v-col cols="12">
+                <v-card class="machinery-carousel-card" elevation="4">
+                    <v-card-title class="pb-4">
+                        <h2 class="text-h5 text-wrap">Our Winter Maintenance Equipment</h2>
+                    </v-card-title>
+                    <v-carousel
+                        v-model="currentSlide"
+                        :cycle="true"
+                        interval="6000"
+                        hide-delimiters
+                        show-arrows="hover"
+                        class="machinery-carousel"
+                        height="400"
+                    >
+                        <v-carousel-item
+                            v-for="(image, index) in machineryImages"
+                            :key="index"
+                            :src="image.src"
+                            :alt="image.alt"
+                            cover
+                            class="carousel-item"
+                        >
+                        </v-carousel-item>
+                    </v-carousel>
+                </v-card>
+            </v-col>
+        </v-row>
+        
         <v-row>
             <v-col>
                 <v-card>
@@ -67,5 +98,69 @@
     </v-container>
 
 </template>
-<script>
+
+<script setup>
+import { ref } from 'vue'
+
+const currentSlide = ref(0)
+
+// Import all machinery images
+const machineryImages = ref([
+    { src: new URL('@/assets/images/machinery/image1.webp', import.meta.url).href, alt: 'Winter maintenance equipment 1' },
+    { src: new URL('@/assets/images/machinery/image2.webp', import.meta.url).href, alt: 'Winter maintenance equipment 2' },
+    { src: new URL('@/assets/images/machinery/image3.webp', import.meta.url).href, alt: 'Winter maintenance equipment 3' },
+    { src: new URL('@/assets/images/machinery/image4.webp', import.meta.url).href, alt: 'Winter maintenance equipment 4' },
+    { src: new URL('@/assets/images/machinery/image5.webp', import.meta.url).href, alt: 'Winter maintenance equipment 5' },
+    { src: new URL('@/assets/images/machinery/image6.webp', import.meta.url).href, alt: 'Winter maintenance equipment 6' },
+    { src: new URL('@/assets/images/machinery/image7.webp', import.meta.url).href, alt: 'Winter maintenance equipment 7' },
+    { src: new URL('@/assets/images/machinery/image8.webp', import.meta.url).href, alt: 'Winter maintenance equipment 8' },
+    { src: new URL('@/assets/images/machinery/image9.webp', import.meta.url).href, alt: 'Winter maintenance equipment 9' },
+    { src: new URL('@/assets/images/machinery/image10.webp', import.meta.url).href, alt: 'Winter maintenance equipment 10' },
+    { src: new URL('@/assets/images/machinery/image11.webp', import.meta.url).href, alt: 'Winter maintenance equipment 11' },
+    { src: new URL('@/assets/images/machinery/image12.webp', import.meta.url).href, alt: 'Winter maintenance equipment 12' },
+    { src: new URL('@/assets/images/machinery/image13.webp', import.meta.url).href, alt: 'Winter maintenance equipment 13' }
+])
 </script>
+
+<style scoped>
+.machinery-carousel-card {
+    margin-bottom: 32px;
+}
+
+.machinery-carousel {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    border-radius: 8px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .machinery-carousel {
+        height: 250px !important;
+    }
+}
+
+/* Tablet responsiveness */
+@media (min-width: 601px) and (max-width: 960px) {
+    .machinery-carousel {
+        height: 300px !important;
+    }
+}
+
+/* Desktop and larger */
+@media (min-width: 961px) {
+    .machinery-carousel {
+        height: 400px !important;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1440px) {
+    .machinery-carousel {
+        height: 500px !important;
+    }
+}
+</style>
