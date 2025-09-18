@@ -82,6 +82,32 @@
     <section class="about-section about-cta-section">
       <h2>BE WINTER READY – PROTECT YOUR SITE TODAY!</h2>
     </section>
+    <section class="about-section testimonials-section">
+      <h2 class="testimonials-title">Testimonials</h2>
+      <div class="testimonials-list">
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "TFD Services provided Galway County Council with an excellent Winter Maintenance Service in gritting roads during cold weather along with vehicle hire. The works were carried out efficiently and effectively with a reliable and prompt backup services and we would highly recommend the company for similar works."
+          </p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Fergal Fahey</span>
+            <span class="testimonial-role">Executive Engineer</span>
+            <span class="testimonial-org">Galway County Council</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "TFD Services have provided Winter Maintenance/Salting services on behalf of Aramark Property and IDA Ireland. During this time, we have found TFD and their staff representatives to be excellent in terms of service and reaction times, always conducting themselves in a professional manner. The businesses located on the various IDA Business Parks have provided positive feedback in terms of the service levels provided by TFD.<br><br>
+            We have no hesitation in recommending TFD Services."
+          </p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Diane Fogarty Charles</span>
+            <span class="testimonial-role">Property Manager</span>
+            <span class="testimonial-org">Aramark Property</span>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -251,6 +277,64 @@
   font-size: 1rem;
 }
 
+.testimonials-section {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding: 0 16px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonials-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a2330;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+.testimonials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.testimonial-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 28px 24px;
+  position: relative;
+  border-left: 5px solid #3777a5;
+}
+
+.testimonial-text {
+  font-size: 1.08rem;
+  color: #222;
+  font-style: italic;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 1rem;
+  color: #18355b;
+  font-weight: 500;
+}
+.testimonial-name {
+  font-weight: bold;
+  color: #3777a5;
+}
+.testimonial-role {
+  font-size: 0.98rem;
+  color: #555;
+}
+.testimonial-org {
+  font-size: 0.98rem;
+  color: #888;
+}
+
 /* CTA */
 .about-cta-section {
   background: #f5f7fa;
@@ -324,6 +408,21 @@
   .about-cta-section {
     padding: 12px 0;
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials-section {
+    padding: 0 4px;
+  }
+  .testimonial-card {
+    padding: 18px 8px;
+  }
+  .testimonials-title {
+    font-size: 1.15rem;
+  }
+  .testimonial-text {
+    font-size: 0.98rem;
   }
 }
 </style>
