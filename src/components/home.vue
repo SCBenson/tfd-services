@@ -42,7 +42,7 @@
   background-color:black;
   background-size: cover;
   background-position: center;
-  background-image: url('@/assets/images/tfd-herobg.webp');
+  background-image: url('@/assets/images/hero-bg.webp');
   /* CRITICAL: Fixed height to prevent any layout shift */
   height: 100vh !important;
   min-height: 100vh !important;

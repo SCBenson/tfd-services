@@ -12,7 +12,7 @@
             <v-btn color="white" class="about-hero-btn about-hero-btn-outline">GET A QUOTE</v-btn>
           </div>
         </div>
-        <img src="@/assets/images/machinery/image1.webp" alt="Winter Truck" class="about-hero-img" />
+        <img src="@/assets/images/machinery/image1.webp" alt="Winter Truck" class="mb-2 about-hero-img" />
       </div>
     </section>
 
@@ -22,13 +22,10 @@
         <div class="about-us-text">
           <h2>ABOUT US</h2>
           <p>
-            TFD Services is a trusted –portive forword#lying Witter maintenance services across Asstriat
-            With years of experience feepinsi and coaltest, trained operators and reliable planning to Entue
-            surface stay clear during the foughtt
-            Our mission is simple: to keep people, puslinfnest, and communities moving safely.
+            TFD Services provides professional salting, gritting, and snow clearing solutions throughout Galway city and county to ensure roads, car parks, industrial sites, and public areas remain safe throughout winter. With modern equipment, skilled operators, and a strong focus on reliability, we help businesses and communities stay moving during harsh weather.
           </p>
         </div>
-        <img src="@/assets/images/machinery/image2.webp" alt="About Truck" class="about-us-img" />
+        <img src="@/assets/images/machinery/image2.webp" alt="About Truck" class=" mt-2 about-us-img" />
       </div>
     </section>
 
