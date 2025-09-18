@@ -2,13 +2,13 @@
     <v-app-bar
     height="56"
     class="px-2 px-sm-8"
-    color="black"
+    color="light-blue-darken-4"
     scroll-behavior="hide"
     scroll-threshold="100"
     app
     >
     <template v-slot:prepend>
-    <img :src="logoUrl" height="50" width="50" alt="Company Logo" />
+    <img :src="logoUrl" height="100" width="100" alt="Company Logo" />
 
     <v-toolbar-title
     class="nav-title font-weight-bold text-body-1"
@@ -19,13 +19,13 @@
 
     <v-spacer></v-spacer>
 
-    <v-container class="d-none d-md-flex justify-end align-center gap-4">
+    <v-container class="d-md-flex justify-end align-center gap-4">
         <router-link to="/" class="no-underline text-white mx-2">Home</router-link>
         <router-link to="/about" class="no-underline text-white mx-2">About</router-link>
         <router-link to="/contact" class="no-underline text-white mx-2">Contact</router-link>
     </v-container>
 
-    <template v-slot:append>
+    <!-- <template v-slot:append>
 
       <v-app-bar-nav-icon
         class="d-flex d-md-none"
@@ -34,7 +34,7 @@
         @click.stop="drawer = !drawer"
       >
       </v-app-bar-nav-icon>
-    </template>
+    </template> -->
     
 
     </v-app-bar>
@@ -59,7 +59,7 @@
 </template>
 
 <script setup>
-import logoUrl from '@/assets/images/tfd-logo.webp';
+import logoUrl from '@/assets/images/tfd-logo_bg-edited.webp';
 import { ref } from 'vue';
 const drawer = ref(false);
 </script>
