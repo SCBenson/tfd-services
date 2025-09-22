@@ -25,7 +25,29 @@
             TFD Services provides professional salting, gritting, and snow clearing solutions throughout Galway city and county to ensure roads, car parks, industrial sites, and public areas remain safe throughout winter. With modern equipment, skilled operators, and a strong focus on reliability, we help businesses and communities stay moving during harsh weather.
           </p>
         </div>
-        <img src="@/assets/images/machinery/image2.webp" alt="About Truck" class=" mt-2 about-us-img" />
+        <div class="about-us-carousel mt-2">
+          <v-carousel
+            cycle
+            height="220"
+            hide-delimiters
+            show-arrows="hover"
+            interval="4000"
+            class="machinery-carousel"
+          >
+            <v-carousel-item
+              v-for="(img, i) in machineryImages"
+              :key="i"
+            >
+              <v-img
+                :src="img"
+                :alt="`Machinery image ${i + 1}`"
+                class="carousel-img"
+                cover
+              />
+            </v-carousel-item>
+          </v-carousel>
+        </div>
+        <!-- <img src="@/assets/images/machinery/image2.webp" alt="About Truck" class=" mt-2 about-us-img" /> -->
       </div>
     </section>
 
@@ -109,7 +131,21 @@
 </template>
 
 <script setup>
-// No logic needed for wireframe
+const machineryImages = [
+  new URL('@/assets/images/machinery/image1.webp', import.meta.url).href,
+  new URL('@/assets/images/machinery/image2.webp', import.meta.url).href,
+  new URL('@/assets/images/machinery/image3.webp', import.meta.url).href,
+  new URL('@/assets/images/machinery/image4.webp', import.meta.url).href,
+  new URL('@/assets/images/machinery/image5.webp', import.meta.url).href,
+  new URL('@/assets/images/machinery/image6.webp', import.meta.url).href,
+  new URL('@/assets/images/machinery/image7.webp', import.meta.url).href,
+  new URL('@/assets/images/machinery/image8.webp', import.meta.url).href,
+  new URL('@/assets/images/machinery/image9.webp', import.meta.url).href,
+  new URL('@/assets/images/machinery/image10.webp', import.meta.url).href,
+  new URL('@/assets/images/machinery/image11.webp', import.meta.url).href,
+  new URL('@/assets/images/machinery/image12.webp', import.meta.url).href,
+  new URL('@/assets/images/machinery/image13.webp', import.meta.url).href,
+]
 </script>
 
 <style scoped>
@@ -210,6 +246,22 @@
   width: 100%;
   border-radius: 8px;
   object-fit: cover;
+}
+.about-us-carousel {
+  flex: 1 1 240px;
+  max-width: 320px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  background: #e7eef5;
+  margin: 0 auto;
+  min-width: 180px;
+}
+.carousel-img {
+  object-fit: cover;
+  width: 100%;
+  height: 220px;
 }
 
 /* Services */
@@ -370,9 +422,17 @@
     min-height: 220px;
     padding: 24px 0 0 0;
   }
+  .about-us-carousel {
+    max-width: 100%;
+    margin-top: 24px;
+  }
+  .carousel-img {
+    height: 160px;
+  }
 }
 
 @media (max-width: 600px) {
+
   .about-hero-content {
     gap: 16px;
   }
@@ -390,9 +450,9 @@
     padding: 12px 0;
     font-size: 0.95rem;
   }
-}
-
-@media (max-width: 600px) {
+  .carousel-img {
+    height: 100px;
+  }
   .testimonials-section {
     padding: 0 4px;
   }
