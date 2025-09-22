@@ -6,13 +6,13 @@
     <section class="about-hero">
       <div class="about-hero-content">
         <div class="about-hero-text">
-          <h1>KEEPING ROADS &amp; SURFACES SAFE THIS WINTER</h1>
+          <h1 class=" text-white">KEEPING ROADS &amp; <br> SURFACES SAFE <br> THIS WINTER</h1>
           <div class="about-hero-buttons">
-            <v-btn color="primary" class="about-hero-btn">CALL US NOW</v-btn>
-            <v-btn color="white" class="about-hero-btn about-hero-btn-outline">GET A QUOTE</v-btn>
+            <a href="tel:+353868733145">
+            <v-btn color="blue" class="about-hero-btn">CALL US NOW</v-btn></a>
+            <v-btn to="/contact" color="white" class="about-hero-btn about-hero-btn-outline">GET A QUOTE</v-btn>
           </div>
         </div>
-        <img src="@/assets/images/machinery/image1.webp" alt="Winter Truck" class="mb-2 about-hero-img" />
       </div>
     </section>
 
@@ -121,8 +121,19 @@
 
 /* Hero */
 .about-hero {
-  background: #e7eef5;
+  background: url('@/assets/images/hero-bg.webp') center center/cover no-repeat;
+  position: relative;
   padding: 32px 0 0 0;
+  min-height: 320px;
+}
+/* Add overlay for contrast */
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 1;
+  pointer-events: none;
 }
 .about-hero-content {
   max-width: 1200px;
@@ -132,6 +143,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 32px;
+  position: relative;
+  z-index: 2;
 }
 .about-hero-text {
   flex: 1 1 340px;
@@ -349,52 +362,23 @@
 
 /* Responsive */
 @media (max-width: 900px) {
-  .about-hero-content,
-  .about-us-content,
-  .about-safety-why-grid {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 24px;
-  }
-  .about-hero-img,
-  .about-us-img {
-    max-width: 100%;
-    margin: 0 auto;
-  }
   .about-hero-content {
     gap: 24px;
     padding: 0 0 24px 0;
   }
-  .about-hero-text h1 {
-    font-size: 1.5rem;
-  }
-  .about-section {
-    padding: 0 8px;
-  }
-  .about-service-card {
-    min-width: 140px;
-    max-width: 100%;
-    padding: 16px 8px;
-  }
-  .about-safety-card, .about-why-card {
-    min-width: 0;
-    max-width: 100%;
-    padding: 20px 10px;
-  }
-  .about-cta-section {
-    padding: 20px 0;
-    font-size: 1rem;
+  .about-hero {
+    min-height: 220px;
+    padding: 24px 0 0 0;
   }
 }
 
 @media (max-width: 600px) {
-  .about-hero-content,
-  .about-us-content,
-  .about-safety-why-grid {
+  .about-hero-content {
     gap: 16px;
   }
-  .about-hero-text h1 {
-    font-size: 1.1rem;
+  .about-hero {
+    min-height: 120px;
+    padding: 12px 0 0 0;
   }
   .about-section {
     padding: 0 4px;
