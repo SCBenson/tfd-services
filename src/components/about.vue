@@ -101,31 +101,30 @@
     <section class="about-section about-cta-section">
       <h2>BE WINTER READY – PROTECT YOUR SITE TODAY!</h2>
     </section>
+    <!-- Testimonials Section as Carousel -->
     <section class="about-section testimonials-section">
       <h2 class="testimonials-title">Testimonials</h2>
-      <div class="testimonials-list">
-        <div class="testimonial-card">
-          <p class="testimonial-text">
-            "TFD Services provided Galway County Council with an excellent Winter Maintenance Service in gritting roads during cold weather along with vehicle hire. The works were carried out efficiently and effectively with a reliable and prompt backup services and we would highly recommend the company for similar works."
-          </p>
-          <div class="testimonial-author">
-            <span class="testimonial-name">Fergal Fahey</span>
-            <span class="testimonial-role">Executive Engineer</span>
-            <span class="testimonial-org">Galway County Council</span>
+      <v-carousel
+        cycle
+        hide-delimiters
+        show-arrows="hover"
+        interval="7000"
+        height="auto"
+        class="testimonials-carousel"
+      >
+        <v-carousel-item v-for="(testimonial, i) in testimonials" :key="i">
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "{{ testimonial.text }}"
+            </p>
+            <div class="testimonial-author">
+              <span class="testimonial-name">{{ testimonial.name }}</span>
+              <span class="testimonial-role">{{ testimonial.role }}</span>
+              <span class="testimonial-org">{{ testimonial.org }}</span>
+            </div>
           </div>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-text">
-            "TFD Services have provided Winter Maintenance/Salting services on behalf of Aramark Property and IDA Ireland. During this time, we have found TFD and their staff representatives to be excellent in terms of service and reaction times, always conducting themselves in a professional manner. The businesses located on the various IDA Business Parks have provided positive feedback in terms of the service levels provided by TFD.<br><br>
-            We have no hesitation in recommending TFD Services."
-          </p>
-          <div class="testimonial-author">
-            <span class="testimonial-name">Diane Fogarty Charles</span>
-            <span class="testimonial-role">Property Manager</span>
-            <span class="testimonial-org">Aramark Property</span>
-          </div>
-        </div>
-      </div>
+        </v-carousel-item>
+      </v-carousel>
     </section>
   </div>
 </template>
@@ -145,6 +144,22 @@ const machineryImages = [
   new URL('@/assets/images/machinery/image11.webp', import.meta.url).href,
   new URL('@/assets/images/machinery/image12.webp', import.meta.url).href,
   new URL('@/assets/images/machinery/image13.webp', import.meta.url).href,
+]
+const testimonials = [
+  {
+    text: `TFD Services provided Galway County Council with an excellent Winter Maintenance Service in gritting roads during cold weather along with vehicle hire. The works were carried out efficiently and effectively with a reliable and prompt backup services and we would highly recommend the company for similar works.`,
+    name: "Fergal Fahey",
+    role: "Executive Engineer",
+    org: "Galway County Council"
+  },
+  {
+    text: `TFD Services have provided Winter Maintenance/Salting services on behalf of Aramark Property and IDA Ireland. During this time, we have found TFD and their staff representatives to be excellent in terms of service and reaction times, always conducting themselves in a professional manner. The businesses located on the various IDA Business Parks have provided positive feedback in terms of the service levels provided by TFD.
+
+We have no hesitation in recommending TFD Services.`,
+    name: "Diane Fogarty Charles",
+    role: "Property Manager",
+    org: "Aramark Property"
+  }
 ]
 </script>
 
@@ -347,6 +362,10 @@ const machineryImages = [
   margin-left: auto;
   margin-right: auto;
 }
+.testimonials-carousel {
+  max-width: 700px;
+  margin: 0 auto;
+}
 .testimonials-title {
   text-align: center;
   font-size: 1.5rem;
@@ -360,23 +379,25 @@ const machineryImages = [
   flex-direction: column;
   gap: 28px;
 }
-.testimonial-card {
+.v-carousel .testimonial-card {
   background: #f8fafc;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   padding: 28px 24px;
   position: relative;
   border-left: 5px solid #3777a5;
+  margin: 0 8px;
+  min-height: 350px;
 }
 
-.testimonial-text {
+.v-carousel .testimonial-text {
   font-size: 1.08rem;
   color: #222;
   font-style: italic;
   margin-bottom: 18px;
   line-height: 1.6;
 }
-.testimonial-author {
+.v-carousel .testimonial-author {
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -384,15 +405,15 @@ const machineryImages = [
   color: #18355b;
   font-weight: 500;
 }
-.testimonial-name {
+.v-carousel .testimonial-name {
   font-weight: bold;
   color: #3777a5;
 }
-.testimonial-role {
+.v-carousel .testimonial-role {
   font-size: 0.98rem;
   color: #555;
 }
-.testimonial-org {
+.v-carousel .testimonial-org {
   font-size: 0.98rem;
   color: #888;
 }
@@ -456,13 +477,17 @@ const machineryImages = [
   .testimonials-section {
     padding: 0 4px;
   }
-  .testimonial-card {
+  .testimonials-carousel {
+    padding: 0 4px;
+  }
+  .v-carousel .testimonial-card {
     padding: 18px 8px;
+    height: 400px;
   }
   .testimonials-title {
     font-size: 1.15rem;
   }
-  .testimonial-text {
+  .v-carousel .testimonial-text {
     font-size: 0.98rem;
   }
 }
