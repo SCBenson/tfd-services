@@ -4,11 +4,11 @@
         <v-sheet class="hero-section">
       
       <v-container fluid class="pa-0 text-center fill-height pb-0">
-        <v-row ustify="center" align="end" class="fill-height">
+        <v-row ustify="center" align="end" class="fill-height fill-width">
           <v-col cols="12" sm="10" md="8" lg="6" xl="5">
             <div class="hero-content">
-              <h1 class="hero-title text-left text-light-blue-darken-4 font-weight-bold">
-                GRITTING AND WINTER MAINTENANCE
+              <h1 class="hero-title text-left text-blue-darken-3 font-weight-bold">
+                GRITTING<br> &<br> <span class="nowrap">WINTER MAINTENANCE</span>
               </h1>
 
               <!-- <h2 class="hero-subtitle text-white font-weight-regular">
@@ -50,6 +50,16 @@
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
+}
+
+/* Add this for the overlay */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.20); /* Adjust opacity as needed */
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Ensure content is above snow */
