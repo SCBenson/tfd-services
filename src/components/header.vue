@@ -2,7 +2,7 @@
     <v-app-bar
     height="56"
     class="px-2 px-sm-8"
-    color="light-blue-darken-4"
+    color="#030E44"
     scroll-behavior="hide"
     scroll-threshold="100"
     app
@@ -19,7 +19,7 @@
 
     <v-spacer></v-spacer>
 
-    <v-container class="d-md-flex justify-end align-center gap-4">
+    <v-container class="d-md-flex justify-end align-center font-weight-bold gap-4">
         <router-link to="/" class="no-underline text-white mx-2">Home</router-link>
         <router-link to="/about" class="no-underline text-white mx-2">About</router-link>
         <router-link to="/contact" class="no-underline text-white mx-2">Contact</router-link>

@@ -15,7 +15,7 @@
                 Winter Ready. Weather Tested. Always Accessible.
               </h2> -->
               <v-btn
-                color="light-blue-darken-4"
+                color="#030E44"
                 size="large"
                 rounded="xl"
                 to="/contact"
