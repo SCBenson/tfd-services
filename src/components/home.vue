@@ -7,8 +7,8 @@
         <v-row ustify="center" align="end" class="fill-height">
           <v-col cols="12" sm="10" md="8" lg="6" xl="5">
             <div class="hero-content">
-              <h1 class="hero-title text-left text-white font-weight-bold">
-                GRITTING<br> &<br> <span class="nowrap">WINTER MAINTENANCE</span>
+              <h1 class="hero-title text-left text-custom-navy font-weight-bold">
+                Gritting<br> &<br> <span class="nowrap">Winter Maintenance</span>
               </h1>
 
               <!-- <h2 class="hero-subtitle text-white font-weight-regular">
