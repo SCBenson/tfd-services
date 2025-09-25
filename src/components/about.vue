@@ -22,7 +22,7 @@
         <div class="about-us-text">
           <h2>ABOUT US</h2>
           <p>
-            TFD Services provides professional salting, gritting, and snow clearing solutions throughout Galway city and county to ensure roads, car parks, industrial sites, and public areas remain safe throughout winter. With modern equipment, skilled operators, and a strong focus on reliability, we help businesses and communities stay moving during harsh weather.
+            TFD Services provides professional salting, gritting, and snow clearing solutions throughout Galway City and county to ensure roads, car parks, industrial sites, and public areas remain safe throughout winter. With modern equipment, skilled operators, and a strong focus on reliability, we help businesses and communities stay moving during harsh weather.
           </p>
         </div>
         <div class="about-us-carousel mt-2">
@@ -81,8 +81,8 @@
           <h3>SAFETY &amp; QUALITY IS OUR PRIORITY</h3>
           <ul>
             <li>24/7 Weather Monitoring</li>
-            <li>Fally Trained Operators</li>
-            <li>Modern Flet &amp; Equipment</li>
+            <li>Fully Trained Operators</li>
+            <li>Modern Fleet &amp; Equipment</li>
             <li>Health &amp; Safety Compliant</li>
           </ul>
         </div>

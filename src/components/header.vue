@@ -8,7 +8,7 @@
     app
     >
     <template v-slot:prepend>
-    <img :src="logoUrl" height="100" width="100" alt="Company Logo" />
+    <img class="company-logo" :src="logoUrl" height="100" width="100" alt="Company Logo" />
 
     <v-toolbar-title
     class="nav-title font-weight-bold text-body-1"
@@ -67,5 +67,12 @@ const drawer = ref(false);
 <style scoped>
 .no-underline {
   text-decoration: none;
+}
+
+.company-logo {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 10;
 }
 </style>
