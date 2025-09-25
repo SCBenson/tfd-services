@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "PrimaryFont";
+  src: url("@/assets/fonts/Ahroni.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "PrimaryFont", "Montserrat", Arial, sans-serif;
+}
