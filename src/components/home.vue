@@ -19,7 +19,7 @@
                 size="large"
                 rounded="xl"
                 to="/contact"
-                class="hero-button font-weight-bold mb-6 text-white"
+                class="hero-button font-weight-bold mb-6 text-white text-none"
                 >Contact Us
               </v-btn>
             </div>
