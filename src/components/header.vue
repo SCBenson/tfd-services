@@ -1,7 +1,7 @@
 <template>
     <v-app-bar
     height="56"
-    class="px-2 px-sm-8"
+    class="px-2 px-sm-8 header-bar"
     color="#030E44"
     scroll-behavior="hide"
     scroll-threshold="100"
@@ -13,7 +13,7 @@
     <v-toolbar-title
     class="nav-title font-weight-bold text-body-1"
     >
-    <router-link to="/" class="no-underline text-white">TFD Services</router-link>
+    <router-link to="/" class="no-underline text-white nav-title">TFD Services</router-link>
     </v-toolbar-title>
     </template>
 
@@ -65,14 +65,34 @@ const drawer = ref(false);
 </script>
 
 <style scoped>
+.header-bar {
+  overflow: visible !important;
+  position: relative;
+}
 .no-underline {
   text-decoration: none;
 }
 
 .company-logo {
-  position: absolute;
+  position: fixed;
   left: 16px;
-  top: 16px;
-  z-index: 10;
+  top: 0%;
+  z-index: 9999;
+  height: 100px;
+  width: 100px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
+@media (min-width: 600px){
+  .nav-title {
+ margin-left: 35px;
+ font-size:larger;
+}
+}
+@media (min-width: 414px){
+.nav-title {
+  margin-left: 50px;
+  font-size:small
+}
+}
+
 </style>
