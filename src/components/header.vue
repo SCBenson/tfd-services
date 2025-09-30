@@ -19,43 +19,18 @@
 
     <v-spacer></v-spacer>
 
-    <v-container class="d-md-flex justify-end align-center font-weight-bold gap-4">
-        <router-link to="/" class="no-underline text-white mx-2">Home</router-link>
-        <router-link to="/about" class="no-underline text-white mx-2">About</router-link>
-        <router-link to="/contact" class="no-underline text-white mx-2">Contact</router-link>
-    </v-container>
-
-    <!-- <template v-slot:append>
-
-      <v-app-bar-nav-icon
-        class="d-flex d-md-none"
-        variant="text"
-        color="white"
-        @click.stop="drawer = !drawer"
-      >
-      </v-app-bar-nav-icon>
-    </template> -->
+    <div class="d-flex justify-end align-center font-weight-bold nav-links">
+        <router-link to="/" class="no-underline text-white nav-link">Home</router-link>
+        <router-link to="/about" class="no-underline text-white nav-link">About</router-link>
+        <router-link to="/contact" class="no-underline text-white nav-link">Contact</router-link>
+    </div>
     
 
     </v-app-bar>
 
 
 
-    <v-navigation-drawer v-model="drawer" location="right" app temporary class="overflow-x-hidden" width="200">
-    <v-list>
-      <!-- For items WITHOUT sublinks -->
-      <v-list-item to="/">
-        Home
-      </v-list-item>
-      <v-list-item to="/about">
-        About
-      </v-list-item>
-      <v-list-item to="/contact">
-        Contact
-      </v-list-item>
-      <!-- For items WITH sublinks -->
-    </v-list>
-  </v-navigation-drawer>
+
 </template>
 
 <script setup>
@@ -82,17 +57,146 @@ const drawer = ref(false);
   width: 100px;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
+/* Navigation Links Styling */
+.nav-links {
+  gap: clamp(8px, 2vw, 32px);
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.nav-link {
+  font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+  padding: clamp(5px, 1vw, 16px) clamp(8px, 1.5vw, 24px);
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Large Desktop Spacing */
+@media (min-width: 1200px) {
+  .nav-links {
+    gap: clamp(32px, 3vw, 48px);
+  }
+  
+  .nav-link {
+    font-size: clamp(1.1rem, 1.3vw, 1.4rem);
+    padding: clamp(10px, 1.2vw, 18px) clamp(16px, 2vw, 28px);
+  }
+}
+
+/* Extra Large Desktop */
+@media (min-width: 1440px) {
+  .nav-links {
+    gap: clamp(48px, 4vw, 64px);
+  }
+  
+  .nav-link {
+    font-size: clamp(1.2rem, 1.4vw, 1.5rem);
+    padding: clamp(12px, 1.4vw, 20px) clamp(20px, 2.5vw, 32px);
+  }
+}
+
+/* Nav Title Responsive Styling */
+.nav-title {
+  font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: clamp(5px, 1vw, 16px) clamp(8px, 1.5vw, 24px);
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 480px) {
+  .nav-title {
+    font-size: 0.85rem;
+    margin-left: 15px;
+    padding: 5px 8px;
+  }
+  
+  .company-logo {
+    height: 70px !important;
+    width: 70px !important;
+    left: 4px !important;
+    top: 10px !important;
+  }
+  
+  .header-bar {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+  }
+  
+  .nav-links {
+    gap: 6px;
+    margin-right: 4px;
+  }
+  
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-title {
+    font-size: 0.8rem;
+    margin-left: 10px;
+    padding: 4px 6px;
+  }
+  
+  .company-logo {
+    height: 60px !important;
+    width: 60px !important;
+  }
+  
+  .nav-link {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+  }
+}
+
+@media (min-width: 414px){
+  .nav-title {
+    margin-left: 50px;
+  }
+}
+
 @media (min-width: 600px){
   .nav-title {
- margin-left: 35px;
- font-size:larger;
+    margin-left: 35px;
+  }
 }
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .nav-title {
+    font-size: clamp(1.1rem, 1.3vw, 1.4rem);
+    padding: clamp(10px, 1.2vw, 18px) clamp(16px, 2vw, 28px);
+  }
 }
-@media (min-width: 414px){
-.nav-title {
-  margin-left: 50px;
-  font-size:small
+
+/* Extra Large Desktop */
+@media (min-width: 1440px) {
+  .nav-title {
+    font-size: clamp(1.2rem, 1.4vw, 1.5rem);
+    padding: clamp(12px, 1.4vw, 20px) clamp(20px, 2.5vw, 32px);
+  }
 }
+
+/* Ensure header content doesn't overflow */
+@media (max-width: 768px) {
+  .header-bar .v-toolbar-title {
+    max-width: calc(100vw - 180px);
+  }
 }
 
 </style>
