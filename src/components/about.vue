@@ -56,20 +56,20 @@
       <h2>OUR SERVICES</h2>
       <div class="about-services-grid">
         <div class="about-service-card">
-          <v-icon size="36">mdi-shovel</v-icon>
-          <div class="about-service-title">Pre-emptive Salting &amp; Gritting</div>
+          <v-icon size="36" color="white">mdi-shovel</v-icon>
+          <div class="about-service-title text-white">Pre-emptive Salting &amp; Gritting</div>
         </div>
         <div class="about-service-card">
-          <v-icon size="36">mdi-clock-outline</v-icon>
-          <div class="about-service-title">24/7 Reactive Call-Outs</div>
+          <v-icon size="36" color="white">mdi-clock-outline</v-icon>
+          <div class="about-service-title text-white">24/7 Reactive Call-Outs</div>
         </div>
         <div class="about-service-card">
-          <v-icon size="36">mdi-truck-snowflake</v-icon>
-          <div class="about-service-title">Snow Clearing &amp; Ploughing</div>
+          <v-icon size="36" color="white">mdi-truck-snowflake</v-icon>
+          <div class="about-service-title text-white">Snow Clearing &amp; Ploughing</div>
         </div>
         <div class="about-service-card">
-          <v-icon size="36">mdi-warehouse</v-icon>
-          <div class="about-service-title">Salt Supply &amp; Storage</div>
+          <v-icon size="36" color="white">mdi-warehouse</v-icon>
+          <div class="about-service-title text-white">Salt Supply &amp; Storage</div>
         </div>
       </div>
     </section>
@@ -108,7 +108,7 @@
         cycle
         hide-delimiters
         show-arrows="hover"
-        interval="7000"
+        interval="10000"
         height="auto"
         class="testimonials-carousel"
       >
@@ -140,10 +140,7 @@ const machineryImages = [
   new URL('@/assets/images/machinery/image7.webp', import.meta.url).href,
   new URL('@/assets/images/machinery/image8.webp', import.meta.url).href,
   new URL('@/assets/images/machinery/image9.webp', import.meta.url).href,
-  new URL('@/assets/images/machinery/image10.webp', import.meta.url).href,
-  new URL('@/assets/images/machinery/image11.webp', import.meta.url).href,
-  new URL('@/assets/images/machinery/image12.webp', import.meta.url).href,
-  new URL('@/assets/images/machinery/image13.webp', import.meta.url).href,
+    new URL('@/assets/images/machinery/image10.webp', import.meta.url).href,
 ]
 const testimonials = [
   {
@@ -309,7 +306,7 @@ We have no hesitation in recommending TFD Services.`,
   justify-content: center;
 }
 .about-service-card {
-  background: #fff;
+  background: #18355b;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   padding: 24px 16px;
