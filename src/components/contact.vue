@@ -197,6 +197,7 @@ const submitForm = async () => {
 .contact-page {
   background-color: #000000;
   background-image: url('@/assets/images/hero-bg.webp');
+  background-size: cover;
   min-height: 100vh;
   padding: 40px 0;
 }
