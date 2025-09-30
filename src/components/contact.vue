@@ -109,7 +109,6 @@
 
 <script setup>
 import { ref } from 'vue'
-import axios from 'axios'
 
 const formValid = ref(false)
 const contactForm = ref(null)
@@ -159,19 +158,30 @@ const submitForm = async () => {
     loading.value = true
     successMessage.value = ''
     errorMessage.value = ''
+    
     try {
-      const response = await axios.post('http://localhost:3000/api/contact', {
-        firstName: form.value.firstName,
-        phone: form.value.phone,
-        email: form.value.email,
-        subject: form.value.subject,
-        message: form.value.message
+      const response = await fetch('https://tfdservices.ie/send-email.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName: form.value.firstName,
+          phone: form.value.phone,
+          email: form.value.email,
+          subject: form.value.subject,
+          message: form.value.message
+        })
       })
-      if (response.data.success) {
+      
+      const result = await response.json()
+      
+      if (result.success) {
         successMessage.value = "Thank you for your message! We will get back to you soon."
-
         contactForm.value.reset()
         Object.keys(form.value).forEach(key => form.value[key] = '')
+      } else {
+        errorMessage.value = result.message || "An error occurred while sending your message. Please try again later."
       }
     } catch (error) {
       console.error('Error sending message:', error)
