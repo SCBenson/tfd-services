@@ -3,8 +3,8 @@
     <div class="page-wrapper">
         <v-sheet class="hero-section">
       
-      <v-container fluid class="pa-0 text-center fill-height pb-0">
-        <v-row ustify="center" align="end" class="fill-height">
+      <v-container fluid class="pa-0 text-center fill-height pb-0 hero-container">
+        <v-row ustify="center" align="end" class="fill-height hero-row">
           <v-col cols="12" sm="10" md="8" lg="6" xl="5">
             <div class="hero-content">
               <h1 class="hero-title text-left text-custom-navy font-weight-bold">
@@ -14,14 +14,16 @@
               <!-- <h2 class="hero-subtitle text-white font-weight-regular">
                 Winter Ready. Weather Tested. Always Accessible.
               </h2> -->
-              <v-btn
-                color="#030E44"
-                size="large"
-                rounded="xl"
-                to="/contact"
-                class="hero-button font-weight-bold mb-6 text-white text-none"
-                >Contact Us
-              </v-btn>
+              <div class="hero-button-container">
+                <v-btn
+                  color="#030E44"
+                  size="large"
+                  rounded="xl"
+                  to="/contact"
+                  class="hero-button font-weight-bold mb-6 text-white text-none"
+                  >Contact Us
+                </v-btn>
+              </div>
             </div>
           </v-col>
         </v-row>
@@ -96,6 +98,26 @@
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
+}
+
+.hero-button-container {
+  text-align: center;
+}
+
+/* Mobile-only styles */
+@media (max-width: 767px) {
+  .hero-container {
+    align-items: center !important;
+    padding-top: 150px !important;
+  }
+  
+  .hero-row {
+    align-items: center !important;
+  }
+  
+  .hero-button-container {
+    text-align: left;
+  }
 }
 
 /* Tablet and larger */
