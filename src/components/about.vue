@@ -174,56 +174,71 @@ We have no hesitation in recommending TFD Services.`,
 .about-hero {
   background: url('@/assets/images/hero-bg.webp') center center/cover no-repeat;
   position: relative;
-  padding: 32px 0 0 0;
-  min-height: 320px;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 /* Add overlay for contrast */
 .about-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.25);
+  background: rgba(0,0,0,0.3);
   z-index: 1;
   pointer-events: none;
 }
 .about-hero-content {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
+  width: 100%;
+  padding: 0 clamp(16px, 3vw, 48px);
   position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
 }
 .about-hero-text {
-  flex: 1 1 340px;
-  min-width: 280px;
+  max-width: 600px;
+  text-align: left;
 }
 .about-hero-text h1 {
-  font-size: 2.2rem;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
   font-weight: bold;
-  margin-bottom: 24px;
-  color: #1a2330;
+  margin-bottom: clamp(24px, 4vw, 48px);
+  color: white;
   line-height: 1.1;
+  letter-spacing: clamp(1px, 0.2vw, 3px);
+  text-shadow: 3px 3px 12px rgba(0,0,0,0.8);
 }
 .about-hero-buttons {
   display: flex;
-  gap: 16px;
+  gap: clamp(16px, 3vw, 32px);
   flex-wrap: wrap;
 }
 .about-hero-btn {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
   border-radius: 8px;
-  padding: 10px 28px;
+  padding: clamp(12px, 2.5vw, 20px) clamp(24px, 4vw, 40px);
   letter-spacing: 1px;
+  min-width: clamp(140px, 18vw, 180px);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.about-hero-btn:hover {
+  text-decoration: none;
 }
 .about-hero-btn-outline {
-  border: 2px solid #3777a5 !important;
-  color: #3777a5 !important;
-  background: #fff !important;
+  border: 2px solid white !important;
+  color: white !important;
+  background: transparent !important;
 }
 .about-hero-img {
   flex: 1 1 340px;
@@ -434,14 +449,26 @@ We have no hesitation in recommending TFD Services.`,
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .about-hero-content {
+    padding: 0 clamp(12px, 2vw, 32px);
+  }
+}
+
 @media (max-width: 900px) {
   .about-hero-content {
-    gap: 24px;
-    padding: 0 0 24px 0;
+    justify-content: center;
+    text-align: center;
   }
-  .about-hero {
-    min-height: 220px;
-    padding: 24px 0 0 0;
+  .about-hero-text {
+    text-align: center;
+    max-width: 100%;
+  }
+  .about-hero-text h1 {
+    letter-spacing: 1px;
+  }
+  .about-hero-buttons {
+    justify-content: center;
   }
   .about-us-carousel {
     max-width: 100%;
@@ -453,13 +480,21 @@ We have no hesitation in recommending TFD Services.`,
 }
 
 @media (max-width: 600px) {
-
   .about-hero-content {
+    padding: 0 12px;
+  }
+  .about-hero-text h1 {
+    letter-spacing: 0.5px;
+  }
+  .about-hero-buttons {
+    flex-direction: column;
+    align-items: center;
     gap: 16px;
   }
-  .about-hero {
-    min-height: 120px;
-    padding: 12px 0 0 0;
+  .about-hero-btn {
+    width: auto;
+    min-width: 160px;
+    max-width: 200px;
   }
   .about-section {
     padding: 0 4px;
