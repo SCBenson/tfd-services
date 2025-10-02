@@ -496,8 +496,38 @@ We have no hesitation in recommending TFD Services.`,
   .about-section {
     padding: 0 4px;
   }
+  .about-services-grid {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
   .about-service-card {
-    padding: 12px 4px;
+    padding: 8px 12px;
+    width: 280px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+  }
+  .about-service-title {
+    margin-top: 0;
+    font-size: 0.9rem;
+  }
+  .about-safety-why-grid {
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .about-safety-card, .about-why-card {
+    min-width: 200px;
+    max-width: 320px;
+    width: 100%;
+    padding: 20px 16px;
   }
   .about-cta-section {
     padding: 12px 0;
@@ -521,6 +551,18 @@ We have no hesitation in recommending TFD Services.`,
   }
   .v-carousel .testimonial-text {
     font-size: 0.98rem;
+  }
+  .about-us-text {
+    padding: 0 16px;
+  }
+  .about-us-text h2 {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .about-us-text p {
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 16px;
   }
 }
 </style>
