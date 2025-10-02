@@ -6,7 +6,7 @@
     <section class="about-hero">
       <div class="about-hero-content">
         <div class="about-hero-text">
-          <h1 class=" text-white">WINTER MAINTENANCE <br> SPECIALISTS</h1>
+          <h1 class=" text-white">WINTwhiteER MAINTENANCE <br> SPECIALISTS</h1>
           <div class="about-hero-buttons">
             <a href="tel:+353868733145">
             <v-btn color="blue" class="about-hero-btn">CALL US NOW</v-btn></a>
@@ -25,27 +25,29 @@
             TFD Services provides professional salting, gritting, and snow clearing solutions throughout Galway City and county to ensure roads, car parks, industrial sites, and public areas remain safe throughout winter. With modern equipment, skilled operators, and a strong focus on reliability, we help businesses and communities stay moving during harsh weather.
           </p>
         </div>
-        <div class="about-us-carousel mt-2">
-          <v-carousel
-            cycle
-            height="220"
-            hide-delimiters
-            show-arrows="hover"
-            interval="4000"
-            class="machinery-carousel"
-          >
-            <v-carousel-item
-              v-for="(img, i) in machineryImages"
-              :key="i"
-            >
-              <v-img
-                :src="img"
-                :alt="`Machinery image ${i + 1}`"
-                class="carousel-img"
-                cover
-              />
-            </v-carousel-item>
-          </v-carousel>
+                <div class="machinery-carousel-container">
+          <div class="machinery-carousel">
+            <div class="carousel-track" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
+              <div 
+                v-for="(img, i) in machineryImages" 
+                :key="i" 
+                class="carousel-slide"
+              >
+                <img :src="img" :alt="`Machinery image ${i + 1}`" class="carousel-image" />
+              </div>
+            </div>
+            <button @click="prevSlide" class="carousel-btn carousel-btn-prev">‹</button>
+            <button @click="nextSlide" class="carousel-btn carousel-btn-next">›</button>
+            <div class="carousel-indicators">
+              <span 
+                v-for="(img, i) in machineryImages" 
+                :key="i" 
+                class="carousel-indicator"
+                :class="{ active: i === currentSlide }"
+                @click="currentSlide = i"
+              ></span>
+            </div>
+          </div>
         </div>
         <!-- <img src="@/assets/images/machinery/image2.webp" alt="About Truck" class=" mt-2 about-us-img" /> -->
       </div>
@@ -131,6 +133,11 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const currentSlide = ref(0)
+let autoSlideInterval = null
+
 const machineryImages = [
   new URL('@/assets/images/machinery/image1.webp', import.meta.url).href,
   new URL('@/assets/images/machinery/image2.webp', import.meta.url).href,
@@ -141,8 +148,34 @@ const machineryImages = [
   new URL('@/assets/images/machinery/image7.webp', import.meta.url).href,
   new URL('@/assets/images/machinery/image8.webp', import.meta.url).href,
   new URL('@/assets/images/machinery/image9.webp', import.meta.url).href,
-    new URL('@/assets/images/machinery/image10.webp', import.meta.url).href,
+  new URL('@/assets/images/machinery/image10.webp', import.meta.url).href,
 ]
+
+const nextSlide = () => {
+  currentSlide.value = (currentSlide.value + 1) % machineryImages.length
+}
+
+const prevSlide = () => {
+  currentSlide.value = currentSlide.value === 0 ? machineryImages.length - 1 : currentSlide.value - 1
+}
+
+const startAutoSlide = () => {
+  autoSlideInterval = setInterval(nextSlide, 4000)
+}
+
+const stopAutoSlide = () => {
+  if (autoSlideInterval) {
+    clearInterval(autoSlideInterval)
+  }
+}
+
+onMounted(() => {
+  startAutoSlide()
+})
+
+onUnmounted(() => {
+  stopAutoSlide()
+})
 const testimonials = [
   {
     text: `TFD Services provided Galway County Council with an excellent Winter Maintenance Service in gritting roads during cold weather along with vehicle hire. The works were carried out efficiently and effectively with a reliable and prompt backup services and we would highly recommend the company for similar works.`,
@@ -218,6 +251,9 @@ We have no hesitation in recommending TFD Services.`,
   gap: clamp(16px, 3vw, 32px);
   flex-wrap: wrap;
 }
+.about-hero-buttons a {
+  text-decoration: none !important;
+}
 .about-hero-btn {
   font-weight: bold;
   font-size: clamp(1rem, 2.5vw, 1.4rem);
@@ -231,6 +267,7 @@ We have no hesitation in recommending TFD Services.`,
   justify-content: center;
   text-decoration: none;
   transition: all 0.3s ease;
+  border-bottom: none;
 }
 .about-hero-btn:hover {
   text-decoration: none;
@@ -277,21 +314,96 @@ We have no hesitation in recommending TFD Services.`,
   border-radius: 8px;
   object-fit: cover;
 }
-.about-us-carousel {
-  flex: 1 1 240px;
-  max-width: 320px;
+.machinery-carousel-container {
+  flex: 1 1 300px;
+  max-width: 400px;
   width: 100%;
+  margin: 0 auto;
+  min-width: 200px;
+}
+
+.machinery-carousel {
+  position: relative;
+  width: 100%;
+  height: 300px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   background: #e7eef5;
-  margin: 0 auto;
-  min-width: 180px;
+  margin-top: 20px;
 }
-.carousel-img {
-  object-fit: cover;
+
+.carousel-track {
+  display: flex;
   width: 100%;
-  height: 220px;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.carousel-btn-prev {
+  left: 10px;
+}
+
+.carousel-btn-next {
+  right: 10px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.carousel-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.carousel-indicator.active {
+  background: white;
 }
 
 /* Services */
@@ -475,12 +587,12 @@ We have no hesitation in recommending TFD Services.`,
   .about-hero-buttons {
     justify-content: center;
   }
-  .about-us-carousel {
+  .machinery-carousel-container {
     max-width: 100%;
     margin-top: 24px;
   }
-  .carousel-img {
-    height: 160px;
+  .machinery-carousel {
+    height: 250px;
   }
 }
 
@@ -541,8 +653,13 @@ We have no hesitation in recommending TFD Services.`,
     padding: 12px 0;
     font-size: 0.95rem;
   }
-  .carousel-img {
-    height: 100px;
+  .machinery-carousel-container {
+    width: 400px;
+    max-width: 400px;
+    margin: 16px auto;
+  }
+  .machinery-carousel {
+    height: 450px;
   }
   .testimonials-section {
     padding: 0 4px;
