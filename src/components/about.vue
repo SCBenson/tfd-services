@@ -121,6 +121,7 @@
               <span class="testimonial-name">{{ testimonial.name }}</span>
               <span class="testimonial-role">{{ testimonial.role }}</span>
               <span class="testimonial-org">{{ testimonial.org }}</span>
+              <v-img :src="testimonial.logo" height="50" width="200" class="testimonial-logo"></v-img>
             </div>
           </div>
         </v-carousel-item>
@@ -147,7 +148,8 @@ const testimonials = [
     text: `TFD Services provided Galway County Council with an excellent Winter Maintenance Service in gritting roads during cold weather along with vehicle hire. The works were carried out efficiently and effectively with a reliable and prompt backup services and we would highly recommend the company for similar works.`,
     name: "Fergal Fahey",
     role: "Executive Engineer",
-    org: "Galway County Council"
+    org: "Galway County Council",
+    logo: new URL('@/assets/images/galway-county-council.webp', import.meta.url).href
   },
   {
     text: `TFD Services have provided Winter Maintenance/Salting services on behalf of Aramark Property and IDA Ireland. During this time, we have found TFD and their staff representatives to be excellent in terms of service and reaction times, always conducting themselves in a professional manner. The businesses located on the various IDA Business Parks have provided positive feedback in terms of the service levels provided by TFD.
@@ -155,7 +157,8 @@ const testimonials = [
 We have no hesitation in recommending TFD Services.`,
     name: "Diane Fogarty Charles",
     role: "Property Manager",
-    org: "Aramark Property"
+    org: "Aramark Property",
+    logo: new URL('@/assets/images/aramark-logo.webp', import.meta.url).href
   }
 ]
 </script>
@@ -398,8 +401,8 @@ We have no hesitation in recommending TFD Services.`,
   padding: 28px 24px;
   position: relative;
   border-left: 5px solid #3777a5;
-  margin: 0 8px;
-  min-height: 350px;
+  margin: 20px 8px;
+  min-height: 420px;
 }
 
 .v-carousel .testimonial-text {
@@ -428,6 +431,11 @@ We have no hesitation in recommending TFD Services.`,
 .v-carousel .testimonial-org {
   font-size: 0.98rem;
   color: #888;
+}
+.v-carousel .testimonial-logo {
+  margin-top: 12px;
+  border-radius: 4px;
+  object-fit: contain;
 }
 
 /* CTA */
