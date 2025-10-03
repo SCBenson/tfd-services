@@ -6,7 +6,7 @@
     <section class="about-hero">
       <div class="about-hero-content">
         <div class="about-hero-text">
-          <h1 class=" text-white">WINTwhiteER MAINTENANCE <br> SPECIALISTS</h1>
+          <h1 class=" text-white">WINTER MAINTENANCE <br> SPECIALISTS</h1>
           <div class="about-hero-buttons">
             <a href="tel:+353868733145">
             <v-btn color="blue" class="about-hero-btn">CALL US NOW</v-btn></a>
