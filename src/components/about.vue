@@ -6,7 +6,7 @@
     <section class="about-hero">
       <div class="about-hero-content">
         <div class="about-hero-text">
-          <h1 class=" text-custom-navy">Winter Maintenance <br> Specialists</h1>
+          <h1 class=" text-custom-navy">Winter <br class="mobile-break"> Maintenance <br> Specialists</h1>
           <div class="about-hero-buttons">
             <a href="tel:+353868733145">
               <v-btn 
@@ -27,7 +27,7 @@
     <section class="about-section about-us-section">
       <div class="about-us-content">
         <div class="about-us-text text-custom-navy">
-          <h2 class="text-custom-navy">ABOUT US</h2>
+          <h2 class="text-custom-navy mt-2">ABOUT US</h2>
           <p>
             TFD Services provides professional salting, gritting, and snow clearing solutions throughout Galway City and County to ensure roads, car parks, industrial sites, and public areas remain safe throughout winter. With modern equipment, skilled operators, and a strong focus on reliability, we help businesses and communities stay moving during harsh weather.
           </p>
@@ -212,12 +212,14 @@ We have no hesitation in recommending TFD Services.`,
 
 /* Hero */
 .about-hero {
-  background: url('@/assets/images/hero-bg.webp') center center/cover no-repeat;
+  background: url('@/assets/images/hero-bg.webp') center no-repeat;
+  background-size: cover;
   position: relative;
   padding: 0;
-  min-height: 100vh;
+  height: 50vh;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 /* Add overlay for contrast */
 .about-hero::before {
@@ -252,7 +254,9 @@ We have no hesitation in recommending TFD Services.`,
   color: white;
   line-height: 1.1;
   letter-spacing: clamp(1px, 0.2vw, 3px);
-
+}
+.mobile-break {
+  display: none;
 }
 .about-hero-buttons {
   display: flex;
@@ -360,7 +364,7 @@ We have no hesitation in recommending TFD Services.`,
 .carousel-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -439,6 +443,8 @@ We have no hesitation in recommending TFD Services.`,
   padding: 24px 16px;
   min-width: 180px;
   max-width: 220px;
+  min-height: 180px;
+  max-height: 180px;
   flex: 1 1 180px;
   display: flex;
   flex-direction: column;
@@ -464,8 +470,9 @@ We have no hesitation in recommending TFD Services.`,
   border-radius: 8px;
   flex: 1 1 320px;
   min-width: 260px;
-  max-width: 420px;
-  padding: 32px 24px;
+  max-width: 450px;
+  height: 200px;
+  padding: 10px 24px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .about-safety-card h3, .about-why-card h3 {
@@ -478,6 +485,7 @@ We have no hesitation in recommending TFD Services.`,
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 32px;
 }
 .about-safety-card li, .about-why-card li {
   margin-bottom: 10px;
@@ -629,6 +637,9 @@ We have no hesitation in recommending TFD Services.`,
   .about-hero-text h1 {
     letter-spacing: 0.5px;
   }
+  .mobile-break {
+    display: inline;
+  }
   .about-hero-buttons {
     flex-direction: column;
     align-items: flex-start;
@@ -670,6 +681,7 @@ We have no hesitation in recommending TFD Services.`,
     padding: 0 20px;
   }
   .about-safety-card, .about-why-card {
+    max-height: 250px;
     min-width: 200px;
     max-width: 320px;
     width: 100%;
