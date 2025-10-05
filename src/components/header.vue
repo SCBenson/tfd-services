@@ -8,12 +8,12 @@
     app
     >
     <template v-slot:prepend>
-    <img class="company-logo" :src="logoUrl" height="100" width="100" alt="Company Logo" />
+    <img class="company-logo" :src="logoUrl" alt="Company Logo" />
 
     <v-toolbar-title
     class="nav-title font-weight-bold text-body-1"
     >
-    <router-link to="/" class="no-underline text-white nav-title">TFD Services</router-link>
+    <router-link to="/" class="no-underline text-white nav-title font-weight-bold">TFD Services</router-link>
     </v-toolbar-title>
     </template>
 
@@ -53,20 +53,20 @@ const drawer = ref(false);
   left: 16px;
   top: 0%;
   z-index: 9999;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 /* Navigation Links Styling */
 .nav-links {
-  gap: clamp(8px, 2vw, 32px);
+  gap: clamp(6px, 0.8vw, 12px);
   flex-shrink: 1;
   min-width: 0;
 }
 
 .nav-link {
   font-size: clamp(0.8rem, 1.2vw, 1.3rem);
-  padding: clamp(5px, 1vw, 16px) clamp(8px, 1.5vw, 24px);
+  padding: clamp(5px, 1vw, 8px) clamp(8px, 1.5vw, 12px);
   transition: all 0.3s ease;
   border-radius: 4px;
   white-space: nowrap;
@@ -82,7 +82,7 @@ const drawer = ref(false);
 /* Large Desktop Spacing */
 @media (min-width: 1200px) {
   .nav-links {
-    gap: clamp(32px, 3vw, 48px);
+    gap: clamp(16px, 2vw, 24px);
   }
   
   .nav-link {
@@ -94,7 +94,7 @@ const drawer = ref(false);
 /* Extra Large Desktop */
 @media (min-width: 1440px) {
   .nav-links {
-    gap: clamp(48px, 4vw, 64px);
+    gap: clamp(4px, 2.5vw, 8px);
   }
   
   .nav-link {
@@ -124,10 +124,10 @@ const drawer = ref(false);
   }
   
   .company-logo {
-    height: 70px !important;
-    width: 70px !important;
+    height: 75px !important;
+    width: 75px !important;
     left: 4px !important;
-    top: 10px !important;
+    top: 0px !important;
   }
   
   .header-bar {

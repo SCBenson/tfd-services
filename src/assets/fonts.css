@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "ErasDemi";
+  src: url("@/assets/fonts/erasdemiitc.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: "PrimaryFont", "Montserrat", Arial, sans-serif;
 }

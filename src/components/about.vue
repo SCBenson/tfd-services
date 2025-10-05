@@ -6,11 +6,18 @@
     <section class="about-hero">
       <div class="about-hero-content">
         <div class="about-hero-text">
-          <h1 class=" text-white">WINTER MAINTENANCE <br> SPECIALISTS</h1>
+          <h1 class=" text-custom-navy">Winter Maintenance <br> Specialists</h1>
           <div class="about-hero-buttons">
             <a href="tel:+353868733145">
-            <v-btn color="blue" class="about-hero-btn">CALL US NOW</v-btn></a>
-            <v-btn to="/contact" color="white" class="about-hero-btn about-hero-btn-outline">GET A QUOTE</v-btn>
+              <v-btn 
+                color="#18355b"
+                size="large"
+                rounded="xl" 
+                class="about-hero-btn">
+                  CALL US NOW
+              </v-btn>
+            </a>
+            <v-btn size="large" rounded="xl" to="/contact" color="white" class="about-hero-btn about-hero-btn-outline">GET A QUOTE</v-btn>
           </div>
         </div>
       </div>
@@ -19,10 +26,10 @@
     <!-- About Us Section -->
     <section class="about-section about-us-section">
       <div class="about-us-content">
-        <div class="about-us-text">
-          <h2>ABOUT US</h2>
+        <div class="about-us-text text-custom-navy">
+          <h2 class="text-custom-navy">ABOUT US</h2>
           <p>
-            TFD Services provides professional salting, gritting, and snow clearing solutions throughout Galway City and county to ensure roads, car parks, industrial sites, and public areas remain safe throughout winter. With modern equipment, skilled operators, and a strong focus on reliability, we help businesses and communities stay moving during harsh weather.
+            TFD Services provides professional salting, gritting, and snow clearing solutions throughout Galway City and County to ensure roads, car parks, industrial sites, and public areas remain safe throughout winter. With modern equipment, skilled operators, and a strong focus on reliability, we help businesses and communities stay moving during harsh weather.
           </p>
         </div>
                 <div class="machinery-carousel-container">
@@ -55,7 +62,7 @@
 
     <!-- Our Services Section -->
     <section class="about-section about-services-section">
-      <h2>OUR SERVICES</h2>
+      <h2 class="text-custom-navy">OUR SERVICES</h2>
       <div class="about-services-grid">
         <div class="about-service-card">
           <v-icon size="36" color="white">mdi-shovel</v-icon>
@@ -101,11 +108,11 @@
 
     <!-- Call to Action -->
     <section class="about-section about-cta-section">
-      <h2>BE WINTER READY – PROTECT YOUR SITE TODAY!</h2>
+      <h2 class="text-custom-navy">BE WINTER READY – PROTECT YOUR SITE TODAY!</h2>
     </section>
     <!-- Testimonials Section as Carousel -->
-    <section class="about-section testimonials-section">
-      <h2 class="testimonials-title">Testimonials</h2>
+    <section class="testimonials-section">
+      <h2 class="testimonials-title text-custom-navy">Testimonials</h2>
       <v-carousel
         cycle
         hide-delimiters
@@ -116,14 +123,14 @@
       >
         <v-carousel-item v-for="(testimonial, i) in testimonials" :key="i">
           <div class="testimonial-card">
-            <p class="testimonial-text">
+            <p class="testimonial-text text-custom-navy">
               "{{ testimonial.text }}"
             </p>
             <div class="testimonial-author">
-              <span class="testimonial-name">{{ testimonial.name }}</span>
-              <span class="testimonial-role">{{ testimonial.role }}</span>
+              <span class="testimonial-name text-custom-navy">{{ testimonial.name }}</span>
+              <span class="testimonial-role text-custom-navy">{{ testimonial.role }}</span>
               <span class="testimonial-org">{{ testimonial.org }}</span>
-              <v-img :src="testimonial.logo" height="50" width="200" class="testimonial-logo"></v-img>
+              <v-img :src="testimonial.logo" height="70" width="200" class="testimonial-logo"></v-img>
             </div>
           </div>
         </v-carousel-item>
@@ -223,7 +230,7 @@ We have no hesitation in recommending TFD Services.`,
 }
 .about-hero-content {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
   padding: 0 clamp(16px, 3vw, 48px);
   position: relative;
@@ -236,6 +243,7 @@ We have no hesitation in recommending TFD Services.`,
 .about-hero-text {
   max-width: 600px;
   text-align: left;
+  margin-right: auto;
 }
 .about-hero-text h1 {
   font-size: clamp(2.5rem, 6vw, 5.5rem);
@@ -244,7 +252,7 @@ We have no hesitation in recommending TFD Services.`,
   color: white;
   line-height: 1.1;
   letter-spacing: clamp(1px, 0.2vw, 3px);
-  text-shadow: 3px 3px 12px rgba(0,0,0,0.8);
+
 }
 .about-hero-buttons {
   display: flex;
@@ -273,9 +281,9 @@ We have no hesitation in recommending TFD Services.`,
   text-decoration: none;
 }
 .about-hero-btn-outline {
-  border: 2px solid white !important;
+
   color: white !important;
-  background: transparent !important;
+  background-color: #18355b !important;
 }
 .about-hero-img {
   flex: 1 1 340px;
@@ -306,6 +314,10 @@ We have no hesitation in recommending TFD Services.`,
   font-weight: bold;
   margin-bottom: 12px;
   color: #1a2330;
+  text-align: center;
+}
+.about-us-text p {
+  text-align: center;
 }
 .about-us-img {
   flex: 1 1 240px;
@@ -512,7 +524,7 @@ We have no hesitation in recommending TFD Services.`,
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   padding: 28px 24px;
   position: relative;
-  border-left: 5px solid #3777a5;
+  border-left: 5px solid #18355b;
   margin: 20px 8px;
   min-height: 420px;
 }
@@ -523,14 +535,17 @@ We have no hesitation in recommending TFD Services.`,
   font-style: italic;
   margin-bottom: 18px;
   line-height: 1.6;
+  text-align: center;
 }
 .v-carousel .testimonial-author {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2px;
   font-size: 1rem;
   color: #18355b;
   font-weight: 500;
+  text-align: center;
 }
 .v-carousel .testimonial-name {
   font-weight: bold;
@@ -566,6 +581,17 @@ We have no hesitation in recommending TFD Services.`,
 }
 
 /* Responsive */
+@media (min-width: 1024px) {
+  .about-hero-content {
+    margin-left: 0;
+    padding-left: clamp(48px, 5vw, 80px);
+    justify-content: flex-start;
+  }
+  .about-hero-text {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 1200px) {
   .about-hero-content {
     padding: 0 clamp(12px, 2vw, 32px);
@@ -574,18 +600,18 @@ We have no hesitation in recommending TFD Services.`,
 
 @media (max-width: 900px) {
   .about-hero-content {
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
   }
   .about-hero-text {
-    text-align: center;
+    text-align: left;
     max-width: 100%;
   }
   .about-hero-text h1 {
     letter-spacing: 1px;
   }
   .about-hero-buttons {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .machinery-carousel-container {
     max-width: 100%;
@@ -605,7 +631,7 @@ We have no hesitation in recommending TFD Services.`,
   }
   .about-hero-buttons {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
   }
   .about-hero-btn {
@@ -676,6 +702,7 @@ We have no hesitation in recommending TFD Services.`,
   }
   .v-carousel .testimonial-text {
     font-size: 0.98rem;
+    text-align: center;
   }
   .about-us-text {
     padding: 0 16px;

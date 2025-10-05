@@ -1,12 +1,12 @@
 <template>
   <div class="contact-page">
     <v-container class="py-8">
-      <v-row justify="center">
-        <v-col cols="12" sm="10" md="8" lg="6">
+      <v-row justify="start">
+        <v-col cols="12" sm="10" md="8" lg="5" xl="4">
           <v-card class="contact-form-card" elevation="8">
-            <v-card-title class="text-center pa-6">
+            <v-card-title class="text-center pa-6 text-custom-navy">
               <h1 class="text-h4 font-weight-bold">Contact Us</h1>
-              <p class="text-subtitle-1 mt-2 text-grey-darken-1 text-wrap">
+              <p class="text-subtitle-1 mt-2 text-custom-navy text-wrap">
                 Get in touch with our winter maintenance experts
               </p>
             </v-card-title>
@@ -16,6 +16,7 @@
                 <v-row>
                   <v-col cols="12">
                     <v-text-field
+                      class="text-custom-navy"
                       v-model="form.firstName"
                       label="First Name"
                       variant="outlined"
@@ -27,6 +28,7 @@
                   
                   <v-col cols="12">
                     <v-text-field
+                      class="text-custom-navy"
                       v-model="form.phone"
                       label="Phone Number"
                       variant="outlined"
@@ -39,6 +41,7 @@
                   
                   <v-col cols="12">
                     <v-text-field
+                      class="text-custom-navy"
                       v-model="form.email"
                       label="Email Address"
                       variant="outlined"
@@ -51,6 +54,7 @@
                   
                   <v-col cols="12">
                     <v-text-field
+                      class="text-custom-navy"
                       v-model="form.subject"
                       label="Subject"
                       variant="outlined"
@@ -62,6 +66,7 @@
                   
                   <v-col cols="12">
                     <v-textarea
+                      class="text-custom-navy"
                       v-model="form.message"
                       label="Message"
                       variant="outlined"
@@ -206,6 +211,29 @@ const submitForm = async () => {
   background-color: #ffffff !important;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+
+/* Laptop and above - left positioning */
+@media (min-width: 1024px) {
+  .contact-page .v-container {
+    max-width: 100%;
+    padding-left: 5%;
+  }
+  
+  .contact-form-card {
+    max-width: 500px;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1440px) {
+  .contact-page .v-container {
+    padding-left: 8%;
+  }
+  
+  .contact-form-card {
+    max-width: 450px;
+  }
 }
 
 @media (max-width: 600px) {

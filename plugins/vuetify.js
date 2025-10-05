@@ -23,7 +23,7 @@ const mainTheme = {
     "custom-orange": "#f4b754",
     "custom-blue": "#87CEEB",
     "custom-white": "#e5e5e5",
-    "custom-navy": "#030E44",
+    "custom-navy": "#18355b",
   },
 };
 

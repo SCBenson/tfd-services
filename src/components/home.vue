@@ -7,8 +7,8 @@
         <v-row ustify="center" align="end" class="fill-height hero-row">
           <v-col cols="12" sm="10" md="8" lg="6" xl="5">
             <div class="hero-content">
-              <h1 class="hero-title text-left text-custom-navy font-weight-bold">
-                Gritting<br> & <span class="nowrap">Winter Maintenance</span>
+              <h1 class="hero-title text-left text-custom-navy">
+                Gritting<br> and <span class="nowrap">Winter Maintenance</span>
               </h1>
 
               <!-- <h2 class="hero-subtitle text-white font-weight-regular">
@@ -16,7 +16,7 @@
               </h2> -->
               <div class="hero-button-container">
                 <v-btn
-                  color="#030E44"
+                  color="#18355b"
                   size="large"
                   rounded="xl"
                   to="/contact"
@@ -76,9 +76,11 @@
 }
 
 .hero-title {
+  font-family: "ErasDemi", "PrimaryFont", "Montserrat", Arial, sans-serif !important;
   font-size: 2.5rem !important;
   line-height: 1.2;
   margin-bottom: 1rem;
+  font-weight: normal;
 }
 
 .hero-subtitle {
