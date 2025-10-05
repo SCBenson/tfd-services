@@ -520,6 +520,7 @@ We have no hesitation in recommending TFD Services.`,
   color: #1a2330;
   margin-bottom: 28px;
   letter-spacing: 1px;
+  margin-bottom: 32px;
 }
 .testimonials-list {
   display: flex;
