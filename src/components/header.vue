@@ -119,7 +119,7 @@ const drawer = ref(false);
 @media (max-width: 480px) {
   .nav-title {
     font-size: 0.85rem;
-    margin-left: 15px;
+    margin-left: 30px;
     padding: 5px 8px;
   }
   
