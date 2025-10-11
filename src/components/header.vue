@@ -2,7 +2,7 @@
     <v-app-bar
     height="56"
     class="px-2 px-sm-8 header-bar"
-    color="#030E44"
+    color="#18355b"
     scroll-behavior="hide"
     scroll-threshold="100"
     app
