@@ -520,9 +520,9 @@ We have no hesitation in recommending TFD Services.`,
   font-size: 1.5rem;
   font-weight: bold;
   color: #1a2330;
-  margin-bottom: 28px;
+  margin-bottom: 3px;
   letter-spacing: 1px;
-  margin-bottom: 32px;
+
 }
 .testimonials-list {
   display: flex;
@@ -538,7 +538,7 @@ We have no hesitation in recommending TFD Services.`,
   border-radius: 12px;
   padding: 28px 24px;
   position: relative;
-  margin: 20px 8px;
+  margin: 10px 8px;
   min-height: 420px;
 }
 
