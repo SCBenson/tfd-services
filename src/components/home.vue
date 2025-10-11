@@ -21,7 +21,7 @@
                   rounded="xl"
                   to="/contact"
                   class="hero-button font-weight-bold mb-6 text-white text-none"
-                  >Contact Us
+                  >CONTACT US
                 </v-btn>
               </div>
             </div>
