@@ -513,6 +513,7 @@ We have no hesitation in recommending TFD Services.`,
 .testimonials-carousel {
   max-width: 700px;
   margin: 0 auto;
+  background-color: #fff;
 }
 .testimonials-title {
   text-align: center;
@@ -528,15 +529,37 @@ We have no hesitation in recommending TFD Services.`,
   flex-direction: column;
   gap: 28px;
 }
+.testimonial-card{
+  background: #fff;
+}
+
 .v-carousel .testimonial-card {
-  background: #f8fafc;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   padding: 28px 24px;
   position: relative;
-  border: 3px solid #18355b;
   margin: 20px 8px;
   min-height: 420px;
+}
+
+.v-carousel .testimonial-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  background-color: #18355b;
+  height: calc(100% - 56px);
+}
+
+.v-carousel .testimonial-card::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3px;
+  background-color: #18355b;
+  height: calc(100% - 56px);
 }
 
 .v-carousel .testimonial-text {
