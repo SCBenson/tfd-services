@@ -601,6 +601,13 @@ We have no hesitation in recommending TFD Services.`,
   }
 }
 
+@media (min-width: 704px) and (max-width: 867px) {
+  .about-safety-card, .about-why-card {
+    height: 220px;
+    max-height: 220px;
+  }
+}
+
 @media (max-width: 1200px) {
   .about-hero-content {
     padding: 0 clamp(12px, 2vw, 32px);
@@ -631,7 +638,14 @@ We have no hesitation in recommending TFD Services.`,
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 320px) {
+  .about-safety-card, .about-why-card {
+    height: 220px;
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 300px) {
   .about-hero-content {
     padding: 0 12px;
   }
@@ -682,7 +696,7 @@ We have no hesitation in recommending TFD Services.`,
     padding: 0 20px;
   }
   .about-safety-card, .about-why-card {
-    max-height: 250px;
+    max-height: 280px;
     min-width: 200px;
     max-width: 320px;
     width: 100%;
