@@ -66,19 +66,19 @@
       <div class="about-services-grid">
         <div class="about-service-card">
           <v-icon size="36" color="white">mdi-shovel</v-icon>
-          <div class="about-service-title text-white">Pre-emptive Salting &amp; Gritting</div>
+          <div class="about-service-title text-white">Pre-emptive Salting <br> &amp; Gritting</div>
         </div>
         <div class="about-service-card">
           <v-icon size="36" color="white">mdi-clock-outline</v-icon>
-          <div class="about-service-title text-white">24/7 Reactive Call-Outs</div>
+          <div class="about-service-title text-white">24/7 Reactive <br> Call-Outs</div>
         </div>
         <div class="about-service-card">
           <v-icon size="36" color="white">mdi-truck-snowflake</v-icon>
-          <div class="about-service-title text-white">Snow Clearing &amp; Ploughing</div>
+          <div class="about-service-title text-white">Snow Clearing <br> &amp; Ploughing</div>
         </div>
         <div class="about-service-card">
           <v-icon size="36" color="white">mdi-warehouse</v-icon>
-          <div class="about-service-title text-white">Salt Supply &amp; Storage</div>
+          <div class="about-service-title text-white">Salt Supply <br> &amp; Storage</div>
         </div>
       </div>
     </section>
@@ -243,6 +243,7 @@ We have no hesitation in recommending TFD Services.`,
   min-height: 100vh;
 }
 .about-hero-text {
+  font-family: "ErasDemi", "PrimaryFont", "Montserrat", Arial, sans-serif !important;
   max-width: 600px;
   text-align: left;
   margin-right: auto;
@@ -321,7 +322,7 @@ We have no hesitation in recommending TFD Services.`,
   text-align: center;
 }
 .about-us-text p {
-  text-align: center;
+  text-align: justify;
 }
 .about-us-img {
   flex: 1 1 240px;
@@ -539,12 +540,12 @@ We have no hesitation in recommending TFD Services.`,
 }
 
 .v-carousel .testimonial-text {
-  font-size: 1.08rem;
+  font-size: 1rem;
   color: #222;
   font-style: italic;
   margin-bottom: 18px;
   line-height: 1.6;
-  text-align: center;
+  text-align: justify;
 }
 .v-carousel .testimonial-author {
   display: flex;
