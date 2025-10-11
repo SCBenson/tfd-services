@@ -164,9 +164,15 @@ const drawer = ref(false);
   }
 }
 
-@media (min-width: 414px){
+@media (min-width: 312px){
   .nav-title {
-    margin-left: 50px;
+    margin-left: 25px;
+  }
+}
+
+@media (min-width: 500px){
+  .nav-title {
+    margin-left: 35px;
   }
 }
 
