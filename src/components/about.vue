@@ -319,7 +319,7 @@ We have no hesitation in recommending TFD Services.`,
   flex: 1 1 320px;
 }
 .about-us-text h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 12px;
   color: #1a2330;
@@ -429,7 +429,7 @@ We have no hesitation in recommending TFD Services.`,
 
 /* Services */
 .about-services-section h2 {
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 24px;
   color: #1a2330;
@@ -521,7 +521,7 @@ We have no hesitation in recommending TFD Services.`,
 }
 .testimonials-title {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #1a2330;
   margin-bottom: 3px;
@@ -612,7 +612,7 @@ We have no hesitation in recommending TFD Services.`,
 }
 .about-cta-section h2 {
   color: #1a2330;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   font-weight: bold;
   letter-spacing: 1px;
 }
