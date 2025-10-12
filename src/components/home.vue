@@ -8,7 +8,7 @@
           <v-col cols="12" sm="10" md="8" lg="6" xl="5">
             <div class="hero-content">
               <h1 class="hero-title text-left text-custom-navy">
-                Gritting<br> and <span class="nowrap">Winter Maintenance</span>
+                Gritting and <br> Winter Maintenance
               </h1>
 
               <!-- <h2 class="hero-subtitle text-white font-weight-regular">
@@ -80,7 +80,7 @@
   font-size: 2.5rem !important;
   line-height: 1.2;
   margin-bottom: 1rem;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .hero-subtitle {

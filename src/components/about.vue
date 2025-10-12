@@ -216,7 +216,7 @@ We have no hesitation in recommending TFD Services.`,
   background-size: cover;
   position: relative;
   padding: 0;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   align-items: center;
   width: 100%;
@@ -232,29 +232,33 @@ We have no hesitation in recommending TFD Services.`,
 }
 .about-hero-content {
   max-width: 1200px;
-  margin: 0;
+  margin: 0 auto;
   width: 100%;
   padding: 0 clamp(16px, 3vw, 48px);
   position: relative;
   z-index: 2;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 60vh;
+  overflow: hidden;
 }
 .about-hero-text {
   font-family: "ErasDemi", "PrimaryFont", "Montserrat", Arial, sans-serif !important;
-  max-width: 600px;
+  max-width: min(600px, 80vw);
   text-align: left;
-  margin-right: auto;
+  margin: 0 auto;
+  transform: translateX(max(-15%, -150px));
+  max-height: 100%;
+  overflow: hidden;
 }
 .about-hero-text h1 {
-  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-size: clamp(1.8rem, 6vw, 5.5rem);
   font-weight: bold;
-  margin-bottom: clamp(24px, 4vw, 48px);
+  margin-bottom: clamp(16px, 4vw, 48px);
   color: white;
-  line-height: 1.1;
-  letter-spacing: clamp(1px, 0.2vw, 3px);
+  line-height: 1.2;
+  letter-spacing: clamp(0.5px, 0.2vw, 3px);
 }
 .mobile-break {
   display: none;
@@ -296,7 +300,7 @@ We have no hesitation in recommending TFD Services.`,
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* About Us */
@@ -618,10 +622,11 @@ We have no hesitation in recommending TFD Services.`,
   .about-hero-content {
     margin-left: 0;
     padding-left: clamp(48px, 5vw, 80px);
-    justify-content: flex-start;
+    justify-content: center;
   }
   .about-hero-text {
-    margin-left: 0;
+    transform: translateX(max(-20%, -200px));
+    max-width: min(600px, 70vw);
   }
 }
 
@@ -636,22 +641,44 @@ We have no hesitation in recommending TFD Services.`,
   .about-hero-content {
     padding: 0 clamp(12px, 2vw, 32px);
   }
+  .about-hero-text {
+    max-width: min(600px, 85vw);
+    transform: translateX(max(-15%, -120px));
+  }
+}
+
+@media (max-width: 1024px) {
+  .mobile-break {
+    display: inline;
+  }
 }
 
 @media (max-width: 900px) {
+  .about-hero {
+    background-size: cover;
+    background-position: center center;
+  }
   .about-hero-content {
     justify-content: flex-start;
     text-align: left;
+    padding-left: clamp(16px, 4vw, 48px);
+    padding-right: clamp(16px, 4vw, 48px);
   }
   .about-hero-text {
     text-align: left;
-    max-width: 100%;
+    max-width: min(85vw, 500px);
+    transform: translateX(0);
+    margin: 0;
   }
   .about-hero-text h1 {
     letter-spacing: 1px;
+    text-align: left;
   }
   .about-hero-buttons {
     justify-content: flex-start;
+  }
+  .mobile-break {
+    display: inline;
   }
   .machinery-carousel-container {
     max-width: 100%;
@@ -669,20 +696,55 @@ We have no hesitation in recommending TFD Services.`,
   }
 }
 
+@media (max-width: 450px) {
+  .about-hero {
+    background-size: cover;
+    background-position: center center;
+    height: 60vh;
+  }
+  .about-hero-content {
+    padding: 0 16px;
+    height: 60vh;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .about-hero-text {
+    transform: translateX(0);
+    text-align: left;
+    max-width: min(90vw, 400px);
+    margin: 0;
+  }
+  .about-hero-text h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    margin-bottom: clamp(12px, 3vw, 24px);
+    text-align: left;
+  }
+  .about-hero-buttons {
+    justify-content: flex-start;
+  }
+  .mobile-break {
+    display: inline;
+  }
+}
+
 @media (max-width: 300px) {
   .about-hero-content {
     padding: 0 12px;
   }
-  .about-hero-text h1 {
-    letter-spacing: 0.5px;
+  .about-hero-text {
+    text-align: left;
+    max-width: 95vw;
   }
-  .mobile-break {
-    display: inline;
+  .about-hero-text h1 {
+    text-align: left;
   }
   .about-hero-buttons {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+    justify-content: flex-start;
   }
   .about-hero-btn {
     width: auto;
