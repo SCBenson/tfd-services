@@ -618,6 +618,56 @@ We have no hesitation in recommending TFD Services.`,
 }
 
 /* Responsive */
+@media (min-width: 1440px) {
+  .about-us-text h2 {
+    font-size: 2.5rem;
+  }
+  .about-us-text p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+  .about-services-section h2 {
+    font-size: 2.5rem;
+  }
+  .about-service-card {
+    min-width: 220px;
+    max-width: 280px;
+    min-height: 220px;
+    max-height: 220px;
+    padding: 32px 20px;
+  }
+  .about-service-title {
+    font-size: 1.2rem;
+  }
+  .about-safety-card h3, .about-why-card h3 {
+    font-size: 1.4rem;
+  }
+  .about-safety-card li, .about-why-card li {
+    font-size: 1.1rem;
+  }
+  .about-safety-card, .about-why-card {
+    height: 240px;
+    padding: 20px 32px;
+  }
+  .about-cta-section h2 {
+    font-size: 2.8rem;
+  }
+  .testimonials-title {
+    font-size: 2.5rem;
+  }
+  .v-carousel .testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  .v-carousel .testimonial-author {
+    font-size: 1.1rem;
+  }
+  .v-carousel .testimonial-card {
+    padding: 36px 32px;
+    min-height: 460px;
+  }
+}
+
 @media (min-width: 1024px) {
   .about-hero-content {
     margin-left: 0;
