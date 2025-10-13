@@ -10,7 +10,7 @@
           <div class="about-hero-buttons">
             <a href="tel:+353868733145">
               <v-btn 
-                color="white"
+                color="#18355b"
                 size="large"
                 rounded="xl" 
                 class="about-hero-btn">
@@ -291,8 +291,8 @@ We have no hesitation in recommending TFD Services.`,
   text-decoration: none;
 }
 .about-hero-btn-outline {
-  color: black !important;
-  background-color: white !important;
+  color: white !important;
+  background-color: #18355b !important;
 }
 .about-hero-img {
   flex: 1 1 340px;
