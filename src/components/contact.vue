@@ -1,8 +1,9 @@
 <template>
   <div class="contact-page">
-    <v-container class="py-8">
-      <v-row justify="start">
-        <v-col cols="12" sm="10" md="8" lg="5" xl="4">
+    <v-container fluid class="py-8">
+      <v-row justify="start" align="start" class="contact-main-row">
+        <!-- Contact Form Column -->
+        <v-col cols="12" sm="12" md="10" lg="6" xl="5" class="contact-form-col">
           <v-card class="contact-form-card" elevation="8">
             <v-card-title class="text-center pa-6 text-custom-navy">
               <h1 class="text-h4 font-weight-bold">Contact Us</h1>
@@ -107,6 +108,26 @@
             </v-card-text>
           </v-card>
         </v-col>
+        
+        <!-- Google Maps Column -->
+        <v-col cols="12" sm="12" md="10" lg="6" xl="7" class="map-col">
+          <v-row justify="center">
+            <v-col cols="12">
+              <div class="map-container">
+                <iframe
+                  src="https://maps.google.com/maps?q=53.29807395704168,-8.985408136347733&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style="border:0; border-radius: 12px;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="TFD Services Location">
+                </iframe>
+              </div>
+            </v-col>
+          </v-row>
+        </v-col>
       </v-row>
     </v-container>
   </div>
@@ -207,42 +228,148 @@ const submitForm = async () => {
   padding: 40px 0;
 }
 
+/* Main grid layout */
+.contact-main-row {
+  max-width: 1400px;
+  margin: 0 auto; /* Centered by default for mobile */
+}
+
+/* Contact Form Styles */
+.contact-form-col {
+  display: flex;
+  align-items: stretch;
+}
+
 .contact-form-card {
   background-color: #ffffff !important;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: fit-content;
 }
 
-/* Laptop and above - left positioning */
-@media (min-width: 1024px) {
-  .contact-page .v-container {
-    max-width: 100%;
-    padding-left: 5%;
-  }
-  
-  .contact-form-card {
-    max-width: 500px;
-  }
+/* Map Styles */
+.map-col {
+  display: flex;
+  align-items: stretch;
 }
 
-/* Extra large screens */
-@media (min-width: 1440px) {
-  .contact-page .v-container {
-    padding-left: 8%;
-  }
-  
-  .contact-form-card {
-    max-width: 450px;
-  }
+.map-container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
 }
 
-@media (max-width: 600px) {
+.map-container iframe {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 400px;
+}
+
+/* Mobile Styles (xs, sm) */
+@media (max-width: 959px) {
   .contact-page {
     padding: 20px 0;
   }
   
-  .contact-form-card {
-    margin: 0 16px;
+  .contact-main-row {
+    margin: 0 auto;
+    padding: 0 16px;
+    justify-content: center !important;
+  }
+  
+  .contact-form-col,
+  .map-col {
+    margin-bottom: 24px;
+  }
+  
+  .map-container {
+    height: 350px;
+    min-height: 350px;
+  }
+  
+  .map-container iframe {
+    min-height: 350px;
+  }
+}
+
+/* Tablet Styles (md) */
+@media (min-width: 960px) and (max-width: 1263px) {
+  .contact-main-row {
+    margin: 0 auto;
+    padding: 0 32px;
+    justify-content: center !important;
+  }
+  
+  .map-col {
+    margin-top: 24px;
+  }
+  
+  .map-container {
+    height: 450px;
+    min-height: 450px;
+  }
+  
+  .map-container iframe {
+    min-height: 450px;
+  }
+}
+
+/* Desktop Styles (lg) */
+@media (min-width: 1264px) and (max-width: 1903px) {
+  .contact-main-row {
+    margin: 0;
+    margin-left: 48px;
+    padding: 0;
+    justify-content: flex-start !important;
+  }
+  
+  .contact-form-col {
+    padding-right: 16px;
+  }
+  
+  .map-col {
+    padding-left: 16px;
+  }
+  
+  .map-container {
+    height: 600px;
+    min-height: 600px;
+  }
+  
+  .map-container iframe {
+    min-height: 600px;
+  }
+}
+
+/* Large Desktop Styles (xl+) */
+@media (min-width: 1904px) {
+  .contact-main-row {
+    margin: 0;
+    margin-left: 64px;
+    padding: 0;
+    justify-content: flex-start !important;
+  }
+  
+  .contact-form-col {
+    padding-right: 24px;
+  }
+  
+  .map-col {
+    padding-left: 24px;
+  }
+  
+  .map-container {
+    height: 650px;
+    min-height: 650px;
+  }
+  
+  .map-container iframe {
+    min-height: 650px;
   }
 }
 </style>
