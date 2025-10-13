@@ -6,18 +6,18 @@
     <section class="about-hero">
       <div class="about-hero-content">
         <div class="about-hero-text">
-          <h1 class=" text-custom-navy">Winter <br class="mobile-break"> Maintenance <br> Specialists</h1>
+          <h1 class="">Winter <br class="mobile-break"> Maintenance <br> Specialists</h1>
           <div class="about-hero-buttons">
             <a href="tel:+353868733145">
               <v-btn 
-                color="#18355b"
+                color="white"
                 size="large"
                 rounded="xl" 
                 class="about-hero-btn">
                   CALL US NOW
               </v-btn>
             </a>
-            <v-btn size="large" rounded="xl" to="/contact" color="white" class="about-hero-btn about-hero-btn-outline">GET A QUOTE</v-btn>
+            <v-btn size="large" rounded="xl" to="/contact" color="white" class="quote-button about-hero-btn about-hero-btn-outline">GET A QUOTE</v-btn>
           </div>
         </div>
       </div>
@@ -212,7 +212,7 @@ We have no hesitation in recommending TFD Services.`,
 
 /* Hero */
 .about-hero {
-  background: url('@/assets/images/hero-bg.webp') center no-repeat;
+  background: url('@/assets/images/aboutBannerImage.webp') center no-repeat;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -271,6 +271,7 @@ We have no hesitation in recommending TFD Services.`,
 .about-hero-buttons a {
   text-decoration: none !important;
 }
+
 .about-hero-btn {
   font-weight: bold;
   font-size: clamp(1rem, 2.5vw, 1.4rem);
@@ -290,9 +291,8 @@ We have no hesitation in recommending TFD Services.`,
   text-decoration: none;
 }
 .about-hero-btn-outline {
-
-  color: white !important;
-  background-color: #18355b !important;
+  color: black !important;
+  background-color: white !important;
 }
 .about-hero-img {
   flex: 1 1 340px;
@@ -619,41 +619,82 @@ We have no hesitation in recommending TFD Services.`,
 
 /* Responsive */
 @media (min-width: 1440px) {
+  .about-section {
+    max-width: 1600px;
+    margin: 0 auto 48px auto;
+    padding: 0 32px;
+  }
+  .about-us-content {
+    gap: 64px;
+  }
   .about-us-text h2 {
     font-size: 2.5rem;
+    margin-bottom: 24px;
   }
   .about-us-text p {
     font-size: 1.2rem;
     line-height: 1.7;
   }
+  .machinery-carousel-container {
+    max-width: 500px;
+  }
+  .machinery-carousel {
+    height: 400px;
+  }
   .about-services-section h2 {
     font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  .about-services-grid {
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
   }
   .about-service-card {
-    min-width: 220px;
-    max-width: 280px;
-    min-height: 220px;
-    max-height: 220px;
-    padding: 32px 20px;
+    min-width: 260px;
+    max-width: 320px;
+    min-height: 260px;
+    max-height: 260px;
+    padding: 40px 24px;
   }
   .about-service-title {
     font-size: 1.2rem;
+    margin-top: 16px;
+  }
+  .about-safety-why-grid {
+    gap: 64px;
+    max-width: 1400px;
+    margin: 0 auto;
   }
   .about-safety-card h3, .about-why-card h3 {
     font-size: 1.4rem;
+    margin-bottom: 24px;
   }
   .about-safety-card li, .about-why-card li {
     font-size: 1.1rem;
+    margin-bottom: 14px;
   }
   .about-safety-card, .about-why-card {
-    height: 240px;
-    padding: 20px 32px;
+    height: 280px;
+    padding: 32px 40px;
+    max-width: 600px;
+  }
+  .about-cta-section {
+    padding: 48px 0;
   }
   .about-cta-section h2 {
     font-size: 2.8rem;
   }
+  .testimonials-section {
+    max-width: 1200px;
+    padding: 0 32px;
+  }
   .testimonials-title {
     font-size: 2.5rem;
+    margin-bottom: 32px;
+  }
+  .testimonials-carousel {
+    max-width: 900px;
   }
   .v-carousel .testimonial-text {
     font-size: 1.1rem;
@@ -663,8 +704,8 @@ We have no hesitation in recommending TFD Services.`,
     font-size: 1.1rem;
   }
   .v-carousel .testimonial-card {
-    padding: 36px 32px;
-    min-height: 460px;
+    padding: 40px 36px;
+    min-height: 480px;
   }
 }
 
