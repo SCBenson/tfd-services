@@ -476,7 +476,7 @@ We have no hesitation in recommending TFD Services.`,
   flex: 1 1 320px;
   min-width: 260px;
   max-width: 450px;
-  height: 200px;
+  height: 220px;
   padding: 10px 24px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
@@ -611,9 +611,9 @@ We have no hesitation in recommending TFD Services.`,
   margin-bottom: 32px;
 }
 .about-cta-section h2 {
-  color: #1a2330;
+  color: #18355b;
   font-size: 2.2rem;
-  font-weight: bold;
+  font-weight: 1000;
   letter-spacing: 1px;
 }
 
@@ -751,9 +751,11 @@ We have no hesitation in recommending TFD Services.`,
   }
   .about-hero-content {
     justify-content: flex-start;
+    align-items: flex-end;
     text-align: left;
     padding-left: clamp(16px, 4vw, 48px);
     padding-right: clamp(16px, 4vw, 48px);
+    padding-bottom: clamp(24px, 4vw, 48px);
   }
   .about-hero-text {
     text-align: left;
@@ -794,10 +796,10 @@ We have no hesitation in recommending TFD Services.`,
     height: 60vh;
   }
   .about-hero-content {
-    padding: 0 16px;
+    padding: 0 16px 32px 16px;
     height: 60vh;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
   }
   .about-hero-text {
     transform: translateX(0);
