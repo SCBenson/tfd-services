@@ -130,7 +130,7 @@
               <span class="testimonial-name text-custom-navy">{{ testimonial.name }}</span>
               <span class="testimonial-role text-custom-navy">{{ testimonial.role }}</span>
               <span class="testimonial-org">{{ testimonial.org }}</span>
-              <v-img :src="testimonial.logo" height="70" width="200" class="testimonial-logo"></v-img>
+              <v-img :src="testimonial.logo" class="testimonial-logo"></v-img>
             </div>
           </div>
         </v-carousel-item>
@@ -601,6 +601,10 @@ We have no hesitation in recommending TFD Services.`,
   margin-top: 12px;
   border-radius: 4px;
   object-fit: contain;
+  width: 180px;
+  height: 60px;
+  max-width: 200px;
+  max-height: 80px;
 }
 
 /* CTA */
@@ -739,7 +743,7 @@ We have no hesitation in recommending TFD Services.`,
   /* Special styling for longer testimonials (index 1) */
   .v-carousel .testimonial-card.long-testimonial::before,
   .v-carousel .testimonial-card.long-testimonial::after {
-    height: 85%;
+    height: 80%;
   }
   
     .v-carousel .testimonial-card {

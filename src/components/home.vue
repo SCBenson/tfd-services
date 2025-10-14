@@ -157,7 +157,10 @@
 
 @media (max-width: 340px) and (min-width: 320px) {
   .hero-title {
+    position: relative;
+    left: -80px;
     font-size: 1.3rem !important;
+    text-align: center !important;
   }
 }
 
