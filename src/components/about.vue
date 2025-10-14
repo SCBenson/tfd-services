@@ -274,18 +274,19 @@ We have no hesitation in recommending TFD Services.`,
 
 .about-hero-btn {
   font-weight: bold;
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-size: 1rem !important;
   border-radius: 8px;
-  padding: clamp(12px, 2.5vw, 20px) clamp(24px, 4vw, 40px);
+  padding: 0.75rem 2rem !important;
   letter-spacing: 1px;
-  min-width: clamp(140px, 18vw, 180px);
+  min-height: 48px !important;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   text-decoration: none;
   transition: all 0.3s ease;
   border-bottom: none;
+  line-height: 1.4 !important;
 }
 .about-hero-btn:hover {
   text-decoration: none;
@@ -567,7 +568,7 @@ We have no hesitation in recommending TFD Services.`,
 }
 
 .v-carousel .testimonial-text {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #222;
   font-style: italic;
   margin-bottom: 18px;
@@ -697,7 +698,7 @@ We have no hesitation in recommending TFD Services.`,
     max-width: 900px;
   }
   .v-carousel .testimonial-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.7;
   }
   .v-carousel .testimonial-author {
@@ -706,6 +707,11 @@ We have no hesitation in recommending TFD Services.`,
   .v-carousel .testimonial-card {
     padding: 0 36px 40px 36px;
     min-height: 480px;
+  }
+    .about-hero-btn {
+    font-size: 1.25rem !important;
+    padding: 1.25rem 4rem !important;
+    min-height: 64px !important;
   }
 }
 
@@ -785,6 +791,14 @@ We have no hesitation in recommending TFD Services.`,
   }
   .machinery-carousel {
     height: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-hero-btn {
+    font-size: 1.125rem !important;
+    padding: 1rem 3rem !important;
+    min-height: 56px !important;
   }
 }
 
@@ -913,7 +927,7 @@ We have no hesitation in recommending TFD Services.`,
     font-size: 1.15rem;
   }
   .v-carousel .testimonial-text {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     text-align: center;
   }
   .about-us-text {
