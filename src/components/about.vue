@@ -709,6 +709,12 @@ We have no hesitation in recommending TFD Services.`,
   }
 }
 
+@media (min-width: 901px) {
+  .about-hero-text {
+    margin-left: 80px;
+  }
+}
+
 @media (min-width: 1024px) {
   .about-hero-content {
     margin-left: 0;
