@@ -731,6 +731,10 @@ We have no hesitation in recommending TFD Services.`,
     transform: translateX(max(-20%, -200px));
     max-width: min(600px, 70vw);
   }
+    .v-carousel .testimonial-card::before,
+  .v-carousel .testimonial-card::after {
+    height: calc(70% - 28px);
+  }
 }
 
 @media (min-width: 704px) and (max-width: 867px) {
