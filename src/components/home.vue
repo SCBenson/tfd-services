@@ -94,7 +94,7 @@
 
 /* Hero Content Responsive Styling */
 .hero-content {
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 2.5rem 1rem;
   text-align: left;
   max-width: 100%;
 }
@@ -130,11 +130,42 @@
   text-align: left;
 }
 
+/* Specific font-size adjustments for small screens */
+@media (max-width: 570px) and (min-width: 476px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 475px) and (min-width: 411px) {
+  .hero-title {
+    font-size: 1.7rem !important;
+  }
+}
+
+@media (max-width: 410px) and (min-width: 371px) {
+  .hero-title {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 370px) and (min-width: 341px) {
+  .hero-title {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media (max-width: 340px) and (min-width: 320px) {
+  .hero-title {
+    font-size: 1.3rem !important;
+  }
+}
+
 /* Mobile-only styles */
 @media (max-width: 767px) {
   .hero-container {
     align-items: center !important;
-    padding: 180px 8px 80px 8px !important;
+    padding: 180px 8px 40px 8px !important;
     min-height: 100vh;
     padding-left: 8px !important;
   }
@@ -162,7 +193,7 @@
   }
   
   .hero-content {
-    padding: 3rem 2rem;
+    padding: 3rem 2rem 2.5rem 2rem;
   }
   
   .hero-title {
@@ -190,7 +221,7 @@
   }
   
   .hero-content {
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 2.5rem 2rem;
   }
   
   .hero-title {
@@ -211,7 +242,7 @@
   }
   
   .hero-content {
-    padding: 5rem 2rem;
+    padding: 5rem 2rem 2.5rem 2rem;
   }
   
   .hero-title {
@@ -239,7 +270,7 @@
   }
   
   .hero-content {
-    padding: 6rem 2rem;
+    padding: 6rem 2rem 2.5rem 2rem;
   }
   
   .hero-title {

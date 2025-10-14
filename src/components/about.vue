@@ -212,7 +212,7 @@ We have no hesitation in recommending TFD Services.`,
 
 /* Hero */
 .about-hero {
-  background: url('@/assets/images/aboutBannerImage.webp') center no-repeat;
+  background: url('@/assets/images/hero-bg.webp') center no-repeat;
   background-size: cover;
   position: relative;
   padding: 0;
