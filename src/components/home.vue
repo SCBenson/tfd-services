@@ -3,12 +3,12 @@
     <div class="page-wrapper">
         <v-sheet class="hero-section">
       
-      <v-container fluid class="pa-0 text-center fill-height pb-0 hero-container">
-        <v-row ustify="center" align="end" class="fill-height hero-row">
-          <v-col cols="12" sm="10" md="8" lg="6" xl="5">
+      <v-container fluid class="pa-0 pb-0 hero-container">
+        <v-row justify="start" align="center" class="hero-row">
+          <v-col cols="12" sm="10" md="8" lg="6" xl="5" class="hero-col">
             <div class="hero-content">
               <h1 class="hero-title text-left text-custom-navy">
-                Gritting and <br> Winter Maintenance
+                Gritting and <br> Winter <br>Maintenance
               </h1>
 
               <!-- <h2 class="hero-subtitle text-white font-weight-regular">
@@ -45,13 +45,14 @@
   background-size: cover;
   background-position: center;
   background-image: url('@/assets/images/hero-bg.webp');
-  /* CRITICAL: Fixed height to prevent any layout shift */
-  height: 100vh !important;
+  /* Flexible height that adapts to content and zoom levels */
   min-height: 100vh !important;
-  max-height: 100vh !important;
+  height: auto !important;
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 /* Add this for the overlay */
@@ -70,9 +71,32 @@
   z-index: 2;
 }
 
+.hero-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2%;
+  padding-top: 100px; /* Lower content by 100px */
+}
+
+.hero-row {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  justify-content: flex-start !important;
+}
+
+.hero-col {
+  text-align: left;
+}
+
 /* Hero Content Responsive Styling */
 .hero-content {
   padding: 2rem 1rem;
+  text-align: left;
+  max-width: 100%;
 }
 
 .hero-title {
@@ -103,18 +127,26 @@
 }
 
 .hero-button-container {
-  text-align: center;
+  text-align: left;
 }
 
 /* Mobile-only styles */
 @media (max-width: 767px) {
   .hero-container {
     align-items: center !important;
-    padding-top: 150px !important;
+    padding: 180px 8px 80px 8px !important;
+    min-height: 100vh;
+    padding-left: 8px !important;
   }
   
   .hero-row {
     align-items: center !important;
+    min-height: auto;
+    justify-content: flex-start !important;
+  }
+  
+  .hero-col {
+    text-align: left;
   }
   
   .hero-button-container {
@@ -124,6 +156,11 @@
 
 /* Tablet and larger */
 @media (min-width: 768px) {
+  .hero-container {
+    padding-left: 4% !important;
+    padding-top: 100px !important;
+  }
+  
   .hero-content {
     padding: 3rem 2rem;
   }
@@ -148,6 +185,10 @@
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .hero-container {
+    padding-left: 3% !important;
+  }
+  
   .hero-content {
     padding: 4rem 2rem;
   }
@@ -165,6 +206,10 @@
 
 /* Large Desktop */
 @media (min-width: 1440px) {
+  .hero-container {
+    padding-left: 2% !important;
+  }
+  
   .hero-content {
     padding: 5rem 2rem;
   }
@@ -189,6 +234,10 @@
 
 /* Extra Large Desktop */
 @media (min-width: 1920px) {
+  .hero-container {
+    padding-left: 1.5% !important;
+  }
+  
   .hero-content {
     padding: 6rem 2rem;
   }
@@ -201,6 +250,44 @@
   .hero-subtitle {
     font-size: 2.25rem !important;
     margin-bottom: 4rem;
+  }
+}
+
+/* High zoom level protection */
+@media (max-height: 600px) {
+  .hero-section {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 40px 0;
+  }
+  
+  .hero-container {
+    min-height: auto !important;
+    padding: 40px 0 !important;
+  }
+  
+  .hero-row {
+    min-height: auto !important;
+  }
+  
+  .hero-content {
+    padding: 2rem 1rem !important;
+  }
+  
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 4rem) !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1rem, 4vw, 1.5rem) !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .hero-button {
+    font-size: clamp(0.875rem, 3vw, 1rem) !important;
+    padding: 0.75rem 2rem !important;
+    min-height: 44px !important;
   }
 }
 

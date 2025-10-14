@@ -1,5 +1,5 @@
 <template>
-  <v-footer color="#030E44" class="pa-6">
+  <v-footer color="#18355b" class="pa-6">
     <v-container>
       <v-row class="align-center">
         <!-- Navigation Links Column -->

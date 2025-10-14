@@ -154,8 +154,10 @@ const drawer = ref(false);
   }
   
   .company-logo {
-    height: 60px !important;
-    width: 60px !important;
+    height: 75px !important;
+    width: 75px !important;
+    left: 4px !important;
+    top: 0px !important;
   }
   
   .nav-link {
@@ -166,7 +168,7 @@ const drawer = ref(false);
 
 @media (min-width: 312px){
   .nav-title {
-    margin-left: 25px;
+    margin-left: 30px;
   }
 }
 
@@ -178,13 +180,37 @@ const drawer = ref(false);
 
 @media (min-width: 600px){
   .nav-title {
+    margin-left: 25px;
+    font-size: 1rem;
+  }
+}
+
+/* Medium screens - 1200px and below */
+@media (max-width: 1200px) and (min-width: 900px) {
+  .nav-title {
+    margin-left: 15px;
+    font-size:1rem;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 750px) {
+  .nav-title {
+    margin-left: 20px;
+    font-size:1rem;
+  }
+}
+
+@media (max-width: 750) and (min-width: 601px) {
+  .nav-title {
     margin-left: 35px;
+    font-size:1rem;
   }
 }
 
 /* Large Desktop */
 @media (min-width: 1200px) {
   .nav-title {
+    margin-left: 15px;
     font-size: clamp(1.1rem, 1.3vw, 1.4rem);
     padding: clamp(10px, 1.2vw, 18px) clamp(16px, 2vw, 28px);
   }
@@ -193,6 +219,7 @@ const drawer = ref(false);
 /* Extra Large Desktop */
 @media (min-width: 1440px) {
   .nav-title {
+    margin-left: 15px;
     font-size: clamp(1.2rem, 1.4vw, 1.5rem);
     padding: clamp(12px, 1.4vw, 20px) clamp(20px, 2.5vw, 32px);
   }
