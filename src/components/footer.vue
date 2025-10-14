@@ -5,9 +5,9 @@
         <!-- Navigation Links Column -->
         <v-col cols="12" md="6" lg="8" xl="9" class="text-center text-md-start">
           <div class="nav-links-container">
-            <router-link to="/" class="no-underline text-white footer-link">Home</router-link>
-            <router-link to="/about" class="no-underline text-white footer-link">About</router-link>
-            <router-link to="/contact" class="no-underline text-white footer-link">Contact</router-link>
+            <router-link to="/" class="no-underline text-white footer-link" @click="scrollToTop">Home</router-link>
+            <router-link to="/about" class="no-underline text-white footer-link" @click="scrollToTop">About</router-link>
+            <router-link to="/contact" class="no-underline text-white footer-link" @click="scrollToTop">Contact</router-link>
           </div>
         </v-col>
         
@@ -24,6 +24,13 @@
 
 <script setup>
 const currentYear = new Date().getFullYear()
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
 </script>
 
 <style scoped>
