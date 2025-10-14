@@ -66,7 +66,7 @@
       <div class="about-services-grid">
         <div class="about-service-card">
           <v-icon size="36" color="white">mdi-shovel</v-icon>
-          <div class="about-service-title text-white">Pre-emptive Salting <br> &amp; Gritting</div>
+          <div class="about-service-title text-white">Pre-emptive <br> Salting  &amp; Gritting</div>
         </div>
         <div class="about-service-card">
           <v-icon size="36" color="white">mdi-clock-outline</v-icon>
