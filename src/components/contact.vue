@@ -108,26 +108,6 @@
             </v-card-text>
           </v-card>
         </v-col>
-        
-        <!-- Google Maps Column -->
-        <v-col cols="12" sm="12" md="10" lg="6" xl="7" class="map-col">
-          <v-row justify="center">
-            <v-col cols="12">
-              <div class="map-container">
-                <iframe
-                  src="https://maps.google.com/maps?q=53.29807395704168,-8.985408136347733&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
-                  height="100%"
-                  style="border:0; border-radius: 12px;"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  title="TFD Services Location">
-                </iframe>
-              </div>
-            </v-col>
-          </v-row>
-        </v-col>
       </v-row>
     </v-container>
   </div>
@@ -248,27 +228,6 @@ const submitForm = async () => {
   height: fit-content;
 }
 
-/* Map Styles */
-.map-col {
-  display: flex;
-  align-items: stretch;
-}
-
-.map-container {
-  background-color: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-}
-
-.map-container iframe {
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 400px;
-}
 
 /* Mobile Styles (xs, sm) */
 @media (max-width: 959px) {
@@ -282,19 +241,11 @@ const submitForm = async () => {
     justify-content: center !important;
   }
   
-  .contact-form-col,
-  .map-col {
+  .contact-form-col {
     margin-bottom: 24px;
   }
   
-  .map-container {
-    height: 350px;
-    min-height: 350px;
-  }
-  
-  .map-container iframe {
-    min-height: 350px;
-  }
+
 }
 
 /* Tablet Styles (md) */
@@ -303,19 +254,6 @@ const submitForm = async () => {
     margin: 0 auto;
     padding: 0 32px;
     justify-content: center !important;
-  }
-  
-  .map-col {
-    margin-top: 24px;
-  }
-  
-  .map-container {
-    height: 450px;
-    min-height: 450px;
-  }
-  
-  .map-container iframe {
-    min-height: 450px;
   }
 }
 
@@ -332,18 +270,6 @@ const submitForm = async () => {
     padding-right: 16px;
   }
   
-  .map-col {
-    padding-left: 16px;
-  }
-  
-  .map-container {
-    height: 600px;
-    min-height: 600px;
-  }
-  
-  .map-container iframe {
-    min-height: 600px;
-  }
 }
 
 /* Large Desktop Styles (xl+) */
@@ -359,17 +285,5 @@ const submitForm = async () => {
     padding-right: 24px;
   }
   
-  .map-col {
-    padding-left: 24px;
-  }
-  
-  .map-container {
-    height: 650px;
-    min-height: 650px;
-  }
-  
-  .map-container iframe {
-    min-height: 650px;
-  }
 }
 </style>
