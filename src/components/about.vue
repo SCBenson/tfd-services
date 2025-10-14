@@ -256,7 +256,7 @@ We have no hesitation in recommending TFD Services.`,
   font-size: clamp(1.8rem, 6vw, 5.5rem);
   font-weight: bold;
   margin-bottom: clamp(16px, 4vw, 48px);
-  color: white;
+  color: #18355b;
   line-height: 1.2;
   letter-spacing: clamp(0.5px, 0.2vw, 3px);
 }
