@@ -122,7 +122,7 @@
         class="testimonials-carousel"
       >
         <v-carousel-item v-for="(testimonial, i) in testimonials" :key="i">
-          <div class="testimonial-card">
+          <div class="testimonial-card" :class="{'long-testimonial': i === 1}">
             <p class="testimonial-text text-custom-navy">
               "{{ testimonial.text }}"
             </p>
@@ -733,9 +733,15 @@ We have no hesitation in recommending TFD Services.`,
   }
   .v-carousel .testimonial-card::before,
   .v-carousel .testimonial-card::after {
-    height: calc(100% - 80px);
+    height: 65%
 
   }
+  /* Special styling for longer testimonials (index 1) */
+  .v-carousel .testimonial-card.long-testimonial::before,
+  .v-carousel .testimonial-card.long-testimonial::after {
+    height: 85%;
+  }
+  
     .v-carousel .testimonial-card {
     max-width: 500px;
     margin: 10px auto;
