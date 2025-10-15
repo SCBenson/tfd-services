@@ -195,7 +195,7 @@
   }
 }
 
-@media (max-width: 475px) and (min-width: 411px) {
+@media (max-width: 480px) and (min-width: 411px) {
   /* .hero-title {
     font-size: 1.7rem !important;
   } */
