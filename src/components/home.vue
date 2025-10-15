@@ -203,7 +203,7 @@
     padding: 0 !important;
   }
   .hero-title {
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
     text-align: center !important;
 
   }
