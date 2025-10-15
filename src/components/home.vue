@@ -210,7 +210,7 @@
   
   .hero-content{
     padding-left: 0px !important;
-    width: 55%;
+    width: 50%;
   }
 
   .hero-button-container {
