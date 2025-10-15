@@ -162,7 +162,7 @@
   }
 }
 /* Specific font-size adjustments for small screens */
-@media (max-width: 600px) and (min-width: 476px) {
+@media (max-width: 600px) and (min-width: 480px) {
   /* .hero-title {
     font-size: 2rem !important;
   } */
