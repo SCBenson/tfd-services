@@ -150,8 +150,28 @@
 }
 
 @media (max-width: 370px) and (min-width: 341px) {
-  .hero-title {
+  /* .hero-title {
     font-size: 1.4rem !important;
+  } */
+   .hero-title {
+    position: relative;
+    left: -80px;
+    font-size: 1.3rem !important;
+    text-align: center !important;
+  }
+  .hero-content{
+    padding-left: 0px !important;
+  }
+  .hero-button-container{
+    position: relative;
+    left: -15px;
+  }
+
+  .hero-button{
+    font-size: 1rem !important;
+    padding: 0.5rem 1rem !important;
+    min-height: 40px !important;
+    line-height: 1.5 !important;
   }
 }
 
