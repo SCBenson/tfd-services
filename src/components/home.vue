@@ -129,21 +129,69 @@
 .hero-button-container {
   text-align: left;
 }
-
-/* Specific font-size adjustments for small screens */
-@media (max-width: 800px) and (min-width: 476px) {
+@media (max-width: 800px) and (min-width: 600px) {
   /* .hero-title {
     font-size: 2rem !important;
   } */
-      .hero-title {
-    position: relative;
-    left: -50px;
-    font-size: 2rem !important;
-    text-align: center !important;
+
+  .hero-col{
+    padding: 0 !important;
   }
+  .hero-title {
+    font-size: 2.7rem !important;
+    text-align: center !important;
+
+  }
+  
   .hero-content{
     padding-left: 0px !important;
-    width: 50%;
+    width: 60%;
+  }
+
+  .hero-button-container {
+    text-align: center !important; /* Center the button container */
+ /* Match the h1's margin-left */
+  }
+
+  .hero-button{
+    font-size: 1.3rem !important;
+    padding: 0.5rem 1rem !important;
+    min-height: 70px !important;
+    line-height: 1.8 !important;
+    margin-left: 0 !important; /* Remove the manual margin */
+  }
+}
+/* Specific font-size adjustments for small screens */
+@media (max-width: 600px) and (min-width: 476px) {
+  /* .hero-title {
+    font-size: 2rem !important;
+  } */
+
+  .hero-col{
+    padding: 0 !important;
+  }
+  .hero-title {
+    font-size: 2.4rem !important;
+    text-align: center !important;
+
+  }
+  
+  .hero-content{
+    padding-left: 0px !important;
+    width: 60%;
+  }
+
+  .hero-button-container {
+    text-align: center !important; /* Center the button container */
+ /* Match the h1's margin-left */
+  }
+
+  .hero-button{
+    font-size: 1rem !important;
+    padding: 0.5rem 1rem !important;
+    min-height: 40px !important;
+    line-height: 1.5 !important;
+    margin-left: 0 !important; /* Remove the manual margin */
   }
 }
 
@@ -151,15 +199,30 @@
   /* .hero-title {
     font-size: 1.7rem !important;
   } */
-      .hero-title {
-    position: relative;
-    left: -80px;
-    font-size: 1.3rem !important;
+  .hero-title {
+    font-size: 2rem !important;
     text-align: center !important;
+
   }
+  
   .hero-content{
     padding-left: 0px !important;
+    width: 60%;
   }
+
+  .hero-button-container {
+    text-align: center !important; /* Center the button container */
+ /* Match the h1's margin-left */
+  }
+
+  .hero-button{
+    font-size: 1rem !important;
+    padding: 0.5rem 1rem !important;
+    min-height: 40px !important;
+    line-height: 1.5 !important;
+    margin-left: 0 !important; /* Remove the manual margin */
+  }
+
 }
 
 @media (max-width: 410px) and (min-width: 371px) {
@@ -242,7 +305,7 @@
 }
 
 /* Tablet and larger */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .hero-container {
     padding-left: 4% !important;
     padding-top: 100px !important;
@@ -268,7 +331,7 @@
     min-height: 56px !important;
     line-height: 1.4 !important;
   }
-}
+} */
 
 /* Desktop */
 @media (min-width: 1024px) {
