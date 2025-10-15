@@ -131,21 +131,49 @@
 }
 
 /* Specific font-size adjustments for small screens */
-@media (max-width: 570px) and (min-width: 476px) {
-  .hero-title {
+@media (max-width: 800px) and (min-width: 476px) {
+  /* .hero-title {
     font-size: 2rem !important;
+  } */
+      .hero-title {
+    position: relative;
+    left: -50px;
+    font-size: 2rem !important;
+    text-align: center !important;
+  }
+  .hero-content{
+    padding-left: 0px !important;
+    width: 50%;
   }
 }
 
 @media (max-width: 475px) and (min-width: 411px) {
-  .hero-title {
+  /* .hero-title {
     font-size: 1.7rem !important;
+  } */
+      .hero-title {
+    position: relative;
+    left: -80px;
+    font-size: 1.3rem !important;
+    text-align: center !important;
+  }
+  .hero-content{
+    padding-left: 0px !important;
   }
 }
 
 @media (max-width: 410px) and (min-width: 371px) {
-  .hero-title {
+  /* .hero-title {
     font-size: 1.5rem !important;
+  } */
+      .hero-title {
+    position: relative;
+    left: -80px;
+    font-size: 1.3rem !important;
+    text-align: center !important;
+  }
+  .hero-content{
+    padding-left: 0px !important;
   }
 }
 
@@ -162,17 +190,7 @@
   .hero-content{
     padding-left: 0px !important;
   }
-  .hero-button-container{
-    position: relative;
-    left: -15px;
-  }
-
-  .hero-button{
-    font-size: 1rem !important;
-    padding: 0.5rem 1rem !important;
-    min-height: 40px !important;
-    line-height: 1.5 !important;
-  }
+  
 }
 
 @media (max-width: 340px) and (min-width: 320px) {
