@@ -199,6 +199,9 @@
   /* .hero-title {
     font-size: 1.7rem !important;
   } */
+ .hero-col{
+    padding: 0 !important;
+  }
   .hero-title {
     font-size: 2rem !important;
     text-align: center !important;
@@ -218,8 +221,8 @@
   .hero-button{
     font-size: 1rem !important;
     padding: 0.5rem 1rem !important;
-    min-height: 40px !important;
-    line-height: 1.5 !important;
+    min-height: 45px !important;
+    line-height: 1 !important;
     margin-left: 0 !important; /* Remove the manual margin */
   }
 
