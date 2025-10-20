@@ -273,6 +273,7 @@ We have no hesitation in recommending TFD Services.`,
 }
 
 .about-hero-btn {
+  font-family: "PrimaryFont";
   font-weight: bold;
   font-size: 1rem !important;
   border-radius: 8px;
