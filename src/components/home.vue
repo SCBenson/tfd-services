@@ -7,6 +7,7 @@
         <v-row justify="start" align="center" class="hero-row">
           <v-col cols="12" sm="10" md="8" lg="6" xl="5" class="hero-col">
             <div class="hero-content">
+              <v-img src="@/assets/images/hero-bg.webp" class="hero-img"></v-img>
               <h1 class="hero-title text-left text-custom-navy">
                 Gritting and <br> Winter <br>Maintenance
               </h1>
@@ -54,6 +55,8 @@
   display: flex;
   align-items: center;
 }
+
+
 
 /* Add this for the overlay */
 .hero-section::before {
@@ -273,7 +276,7 @@
 }
 
 @media (max-width: 340px) and (min-width: 320px) {
-         .hero-col{
+  .hero-col{
     padding: 0 !important;
   }
   .hero-title {

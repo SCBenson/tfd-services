@@ -5,10 +5,10 @@
         <!-- Contact Form Column -->
         <v-col cols="12" sm="12" md="10" lg="6" xl="5" class="contact-form-col">
           <v-card class="contact-form-card" elevation="8">
-            <v-card-title class="text-center pa-6 text-custom-navy">
+            <v-card-title class="text-center pa-4 text-custom-navy">
               <h1 class="text-h4 font-weight-bold">Contact Us</h1>
               <p class="text-subtitle-1 mt-2 text-custom-navy text-wrap">
-                Get in touch with our winter maintenance experts
+                Tell us about your winter service needs...
               </p>
             </v-card-title>
             
@@ -200,6 +200,7 @@ const submitForm = async () => {
 </script>
 
 <style scoped>
+
 .contact-page {
   background-color: #000000;
   background-image: url('@/assets/images/hero-bg.webp');
