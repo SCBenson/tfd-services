@@ -221,9 +221,8 @@
   .hero-button{
     font-size: 1rem !important;
     padding: 0.5rem 1rem !important;
-    min-height: 45px !important;
-    line-height: 1 !important;
-    margin-left: 0 !important; /* Remove the manual margin */
+    min-height: 40px !important;
+    line-height: 1.5 !important;
   }
 
 }
@@ -232,14 +231,20 @@
   /* .hero-title {
     font-size: 1.5rem !important;
   } */
+    .hero-col{
+    padding: 0 !important;
+  }
       .hero-title {
-    position: relative;
-    left: -80px;
-    font-size: 1.3rem !important;
+    font-size: 1.8rem !important;
     text-align: center !important;
+  }
+    .hero-button-container {
+    text-align: center !important; /* Center the button container */
+ /* Match the h1's margin-left */
   }
   .hero-content{
     padding-left: 0px !important;
+    width: 55%;
   }
 }
 
@@ -247,31 +252,41 @@
   /* .hero-title {
     font-size: 1.4rem !important;
   } */
+       .hero-col{
+    padding: 0 !important;
+  }
    .hero-title {
-    position: relative;
-    left: -80px;
-    font-size: 1.3rem !important;
+
+    font-size: 1.7rem !important;
     text-align: center !important;
   }
   .hero-content{
     padding-left: 0px !important;
+    width: 55%;
+  }
+
+      .hero-button-container {
+    text-align: center !important; /* Center the button container */
+ /* Match the h1's margin-left */
   }
   
 }
 
 @media (max-width: 340px) and (min-width: 320px) {
+         .hero-col{
+    padding: 0 !important;
+  }
   .hero-title {
-    position: relative;
-    left: -80px;
-    font-size: 1.3rem !important;
+    font-size: 1.6rem !important;
     text-align: center !important;
   }
   .hero-content{
     padding-left: 0px !important;
+        width: 55%;
   }
   .hero-button-container{
-    position: relative;
-    left: -15px;
+    text-align: center !important; /* Center the button container */
+ /* Match the h1's margin-left */
   }
 
   .hero-button{
