@@ -851,7 +851,7 @@ We have no hesitation in recommending TFD Services.`,
     margin: 0;
   }
   .about-hero-text h1 {
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     letter-spacing: 0.5px;
     line-height: 1.3;
     margin-bottom: clamp(12px, 3vw, 24px);
@@ -864,7 +864,13 @@ We have no hesitation in recommending TFD Services.`,
     display: inline;
   }
 }
-
+@media (max-width: 419px) and (min-width: 320px) {
+  .about-hero-text h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem) !important;
+    line-height: 1.2 !important;
+    letter-spacing: clamp(0.8px, 0.2vw, 1.5px) !important;
+  }
+}
 @media (max-width: 300px) {
   .about-hero-content {
     padding: 0 12px;
