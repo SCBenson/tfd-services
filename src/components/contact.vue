@@ -8,7 +8,7 @@
             <v-card-title class="text-center pa-4 text-custom-navy">
               <h1 class="text-h4 font-weight-bold">Contact Us</h1>
               <p class="text-subtitle-1 mt-2 text-custom-navy text-wrap">
-                Tell us about your winter service needs...
+                Get in touch with our winter maintenance experts.
               </p>
             </v-card-title>
             
@@ -287,4 +287,12 @@ const submitForm = async () => {
   }
   
 }
+
+@media (max-width: 415px) and (min-width: 364px) {
+  .contact-form-card .v-card-title p {
+    font-size: 0.85rem !important;
+    line-height: 1.2 !important;
+  }
+}
+
 </style>
