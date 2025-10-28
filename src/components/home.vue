@@ -157,9 +157,9 @@
   }
 
   .hero-button{
-    font-size: 1.3rem !important;
+    font-size: 1.13rem !important;
     padding: 0.5rem 1rem !important;
-    min-height: 70px !important;
+    min-height: 50px !important;
     line-height: 1.8 !important;
     margin-left: 0 !important; /* Remove the manual margin */
   }
@@ -181,7 +181,7 @@
   
   .hero-content{
     padding-left: 0px !important;
-    width: 50%;
+    width: 55%;
   }
 
   .hero-button-container {
@@ -190,9 +190,9 @@
   }
 
   .hero-button{
-    font-size: 1rem !important;
+    font-size: 1.3rem !important;
     padding: 0.5rem 1rem !important;
-    min-height: 40px !important;
+    min-height: 50px !important;
     line-height: 1.5 !important;
     margin-left: 0 !important; /* Remove the manual margin */
   }
@@ -206,14 +206,14 @@
     padding: 0 !important;
   }
   .hero-title {
-    font-size: 1.8rem !important;
+    font-size: 2.2rem !important;
     text-align: left !important;
 
   }
   
   .hero-content{
     padding-left: 0px !important;
-    width: 55%;
+    width: 57%;
   }
 
   .hero-button-container {
@@ -222,10 +222,10 @@
   }
 
   .hero-button{
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
     padding: 0.5rem 1rem !important;
-    min-height: 40px !important;
-    line-height: 1.5 !important;
+    min-height: 45px !important;
+    line-height: 1.8 !important;
   }
 
 }
@@ -237,7 +237,7 @@
     .hero-col{
     padding: 0 !important;
   }
-      .hero-title {
+    .hero-title {
     font-size: 1.8rem !important;
     text-align: left !important;
   }
