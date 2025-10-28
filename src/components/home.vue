@@ -142,7 +142,7 @@
   }
   .hero-title {
     font-size: 2.7rem !important;
-    text-align: center !important;
+    text-align: left !important;
 
   }
   
@@ -152,7 +152,7 @@
   }
 
   .hero-button-container {
-    text-align: center !important; /* Center the button container */
+    text-align: left !important; /* Center the button container */
  /* Match the h1's margin-left */
   }
 
@@ -175,7 +175,7 @@
   }
   .hero-title {
     font-size: 2.4rem !important;
-    text-align: center !important;
+    text-align: left !important;
 
   }
   
@@ -185,7 +185,7 @@
   }
 
   .hero-button-container {
-    text-align: center !important; /* Center the button container */
+    text-align: left !important; /* Center the button container */
  /* Match the h1's margin-left */
   }
 
@@ -207,7 +207,7 @@
   }
   .hero-title {
     font-size: 1.8rem !important;
-    text-align: center !important;
+    text-align: left !important;
 
   }
   
@@ -217,7 +217,7 @@
   }
 
   .hero-button-container {
-    text-align: center !important; /* Center the button container */
+    text-align: left !important; /* Center the button container */
  /* Match the h1's margin-left */
   }
 
@@ -239,10 +239,10 @@
   }
       .hero-title {
     font-size: 1.8rem !important;
-    text-align: center !important;
+    text-align: left !important;
   }
     .hero-button-container {
-    text-align: center !important; /* Center the button container */
+    text-align: left !important; /* Center the button container */
  /* Match the h1's margin-left */
   }
   .hero-content{
@@ -261,7 +261,7 @@
    .hero-title {
 
     font-size: 1.7rem !important;
-    text-align: center !important;
+    text-align: left !important;
   }
   .hero-content{
     padding-left: 0px !important;
@@ -269,7 +269,7 @@
   }
 
       .hero-button-container {
-    text-align: center !important; /* Center the button container */
+    text-align: left !important; /* Center the button container */
  /* Match the h1's margin-left */
   }
   
@@ -281,14 +281,14 @@
   }
   .hero-title {
     font-size: 1.6rem !important;
-    text-align: center !important;
+    text-align: left !important;
   }
   .hero-content{
     padding-left: 0px !important;
         width: 55%;
   }
   .hero-button-container{
-    text-align: center !important; /* Center the button container */
+    text-align: left !important; /* Center the button container */
  /* Match the h1's margin-left */
   }
 
